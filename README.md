@@ -9,9 +9,11 @@ Scenario #1: "Happy path - create a branch in my fork and PR it to main repo"
 * Put some commits into the branch
 * Push to fork
 * PR from fork to main repo
+
 Scenario #2: "Other Intuit engineers have added stuff to master - must rebase"
 * Master moves on, no conflicts
 * must rebase branch on top of master to get lastest
+
 Scenario #3: "Other Intuit engineers have added stuff to master and there are merge conflicts"
 * Master moves on, but with conflicts
 * must rebase branch on top of master to get lastest
@@ -34,6 +36,7 @@ Line 2A by User 1
 Line 3
 Line 4A by User 1
 Line 3A by Michelle which would always be last
+
 Scenario #4 "My team-mate has added other stuff to my feature branch and there are merge conflicts"
 * Merge conflits on the branch itself because my teammate is helping me on the same Feature
 * Teammate has added commits to PD-XYX and I have to rebase my changes on top, and there are merge conflicts
