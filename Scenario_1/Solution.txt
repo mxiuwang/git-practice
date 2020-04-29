@@ -1,0 +1,6 @@
+1. Save all changes to files
+
+In Terminal:
+1. ```git stage -A``` // stages all changes
+2. ```git commit -m "your commit message" ``` // commits changes
+3. ```git push -u <remote repo name> <local branch name> // ex. git push -u origin master
