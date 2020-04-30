@@ -1,3 +1,10 @@
-1. Save all changes to files
-
 In Terminal:
+1. ```git checkout your-branch```
+    a. Add your changes to the branch 
+2. ```git stage -A```
+3. ```git commit -m "your message"```
+[master branch contains changes]
+4. ```git rebase master``` // rebases the changes on your branch on top of master 
+    a. ```git log``` // make sure your latest commits are on top of the changes in master 
+5. ```git push``` // pushes your changes to remote branch 
+6. Open pull request to merge your-branch with master 
