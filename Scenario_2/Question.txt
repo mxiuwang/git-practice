@@ -2,10 +2,6 @@ Scenario 2: Other Intuit engineers have made changes to master, and you must reb
 - master branch moves on, but your changes do not cause any merge conflicts 
 - you must rebase your changes on top of the lastest master, which includes all the other engineer's changes.
 
-Code on your local branch:
-Line 1 
-Line 2
-
 Code in remote upstream:
 Line 1 
 Line 2
