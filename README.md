@@ -1,8 +1,12 @@
 # git-practice
 A repository to practice your git skills!
 
-To start:
-Copy the URL of the git-practice repo on github.intuit.com and run the command "git clone <URL>" in your terminal, in the folder where you want to copy this repository. 
+Setup:
+1. Copy the URL of the git-practice repo on github.intuit.com and run the command "git clone <URL>" in your terminal, in the folder where you want to copy this repository. 
+2. On your local machine, fork the master repo once - call this your "main" fork
+3. Fork the master repo a second time - call this "private"  
+4. Alias the "main" repo from Step 2 as "origin" by 
+5. Alias the "private" repo from step 3 as "myFork"
 
 Scenario #1: "Happy path - create a branch in my fork and PR it to main repo"
 * Start with main repo
