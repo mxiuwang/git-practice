@@ -2,11 +2,12 @@
 A repository to practice your git skills!
 
 Setup:
-1. Copy the URL of the git-practice repo on github.intuit.com and run the command "git clone <URL>" in your terminal, in the folder where you want to copy this repository. 
-2. On your local machine, fork the master repo once - call this your "main" fork
-3. Fork the master repo a second time - call this "private"  
-4. Alias the "main" repo from Step 2 as "origin" by 
-5. Alias the "private" repo from step 3 as "myFork"
+1. Clone "git-practice" repo on your local machine by copying the URL of the git-practice repo and typing `git clone https://github.intuit.com/Albertasaurus/git-practice` in your terminal, in the folder where you wish you clone it. The remote located at `https://github.intuit.com/Albertasaurus/git-practice` will be referred to as "origin".
+1. Fork the above repo on your account by opening the repo on Github, and clicking the "fork" button on the top right-hand corner. Observe that the URL of this remote is `github.intuit.com/<your-name>/git-practice`. From now on, this fork will be referred to as `my-fork`. 
+1. Configure my-fork as a remote in your local `git-practice` repo by typing `git remote add my-fork` in the terminal, opened in your local git-practice repo. This adds "my-fork" as an alias, pointing to the remote `github.intuit.com/<your-name>/git-practice`. You can verify this step is done correctly with the command `git remote -v`, and seeing that `my-fork` is an alias pointing to `github.intuit.com/<your-name>/git-practice`.
+1. Create a new branch named `master-<yourName>` in your local repo by checking out the master branch, and typing the command `git checkout -b master-<your-name>`. We are doing this to pretend `master-<your-name>` is real master branch. Normally, we do not have to do this, but we don't want the changes made in these exercises to affect the real master. 
+1. Push `master-<your-name>` to origin with the command `git push -u origin master-<your-name>`. 
+1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice) by `git remote -v`.
 
 Scenario #1: "Happy path - create a branch in my fork and PR it to main repo"
 * Start with main repo
