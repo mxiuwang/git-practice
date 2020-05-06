@@ -1,5 +1,9 @@
 # git-practice
-A repository to practice your git skills!
+About this Repo:
+This is a repository is a Git practice package with exercises designed to help you develop your Git skills, in the way it is most commonly used at Intuit! This repo is intended for any Intuit employee learning Git for the first time, or engineers wishing to familiarize themselves with the Git workflow at Intuit. 
+
+The repository contains Scenarios in which any Intuit engineers may face, and guides you through how to make, submit, and merge a code change. In general, Scenarios are designed in ascending level of complexity. Each Scenario contains a set of instructions, some StartCode an engineer will attempt to convert to the FinalCode, and the solution. 
+
 
 Setup:
 1. Clone "git-practice" repo on your local machine by copying the URL of the git-practice repo and typing `git clone https://github.intuit.com/Albertasaurus/git-practice` in your terminal, in the folder where you wish you clone it. The remote located at `https://github.intuit.com/Albertasaurus/git-practice` will be referred to as "origin".
