@@ -9,6 +9,11 @@ Setup:
 1. Push `master-<your-name>` to origin with the command `git push -u origin master-<your-name>`. 
 1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice) by `git remote -v`.
 
+For Each Scenario:
+1. Create a new branch in your local repo named `scenario1`, `scenario`...and so on. Do the exercise in each secenario on the respective branch.
+1. Do each exercise, save the changes you made, and push those changes to its remote counterpart in `my-fork`.
+1. Open a Pull Request (PR) to merge those changes from `my-fork` to `master-your-name` in origin. 
+
 Scenario #1: "Happy path - create a branch in my fork and PR it to main repo"
 * Start with main repo
 * Fork it
