@@ -11,7 +11,16 @@ Setup:
 1. Configure my-fork as a remote in your local `git-practice` repo by typing `git remote add my-fork` in the terminal, opened in your local git-practice repo. This adds "my-fork" as an alias, pointing to the remote `github.intuit.com/<your-name>/git-practice`. You can verify this step is done correctly with the command `git remote -v`, and seeing that `my-fork` is an alias pointing to `github.intuit.com/<your-name>/git-practice`.
 1. Create a new branch named `master-<yourName>` in your local repo by checking out the master branch, and typing the command `git checkout -b master-<your-name>`. We are doing this to pretend `master-<your-name>` is real master branch. Normally, we do not have to do this, but we don't want the changes made in these exercises to affect the real master. 
 1. Push `master-<your-name>` to origin with the command `git push -u origin master-<your-name>`. 
-1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice) by `git remote -v`.
+1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice)
+
+```git remote -v```
+
+Expected output: 
+```my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (fetch)
+my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (push)
+origin	git@github.intuit.com:Albertasaurus/git-practice.git (fetch)
+origin	git@github.intuit.com:Albertasaurus/git-practice.git (push)
+```
 
 For Each Scenario:
 1. Create a new branch in your local repo named `scenario1`, `scenario`...and so on. Do the exercise in each secenario on the respective branch.
