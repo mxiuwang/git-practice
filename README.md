@@ -2,7 +2,7 @@
 About this Repo:
 This is a repository is a Git practice package with exercises designed to help you develop your Git skills, in the way it is most commonly used at Intuit! This repo is intended for any Intuit employee learning Git for the first time, or engineers wishing to familiarize themselves with the Git workflow at Intuit. 
 
-The repository contains Scenarios in which any Intuit engineers may face, and guides you through how to make, submit, and merge a code change. In general, Scenarios are designed in ascending level of complexity. Each Scenario contains a set of instructions, some StartCode an engineer will attempt to convert to the FinalCode, and the solution. 
+The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario contains a set of instructions, some StartCode an engineer will attempt to convert to the FinalCode, and the solution. 
 
 
 Setup:
@@ -13,57 +13,19 @@ Setup:
 1. Push `master-<your-name>` to origin with the command `git push -u origin master-<your-name>`. 
 1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice)
 
-```git remote -v```
+    ```console
+    $ git remote -v
+    ```
 
-Expected output: 
-```my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (fetch)
-my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (push)
-origin	git@github.intuit.com:Albertasaurus/git-practice.git (fetch)
-origin	git@github.intuit.com:Albertasaurus/git-practice.git (push)
-```
+    Your output should look something similar to: 
+    ```
+    my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (fetch)
+    my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (push)
+    origin	git@github.intuit.com:Albertasaurus/git-practice.git (fetch)
+    origin	git@github.intuit.com:Albertasaurus/git-practice.git (push)
+    ```
 
 For Each Scenario:
 1. Create a new branch in your local repo named `scenario1`, `scenario`...and so on. Do the exercise in each secenario on the respective branch.
 1. Do each exercise, save the changes you made, and push those changes to its remote counterpart in `my-fork`.
 1. Open a Pull Request (PR) to merge those changes from `my-fork` to `master-your-name` in origin. 
-
-Scenario #1: "Happy path - create a branch in my fork and PR it to main repo"
-* Start with main repo
-* Fork it
-* Clone the fork to your local
-* Create a Feature branch (eg PD-XYZ)
-* Put some commits into the branch
-* Push to fork
-* PR from fork to main repo
-
-Scenario #2: "Other Intuit engineers have added stuff to master - must rebase"
-* Master moves on, no conflicts
-* must rebase branch on top of master to get lastest
-
-Scenario #3: "Other Intuit engineers have added stuff to master and there are merge conflicts"
-* Master moves on, but with conflicts
-* must rebase branch on top of master to get lastest
-* must resolve merge conflicts
---------
-Line 1
-Line 2
-Line 2A by User 1
-Line 3
-Line 4A by User 1
---------
-Line 1
-Line 2
-Line 3
-Line 3A by Michelle which would always be last
---------
-Line 1
-Line 2
-Line 2A by User 1
-Line 3
-Line 4A by User 1
-Line 3A by Michelle which would always be last
-
-Scenario #4 "My team-mate has added other stuff to my feature branch and there are merge conflicts"
-* Merge conflits on the branch itself because my teammate is helping me on the same Feature
-* Teammate has added commits to PD-XYX and I have to rebase my changes on top, and there are merge conflicts
-Rollback Scenarios
