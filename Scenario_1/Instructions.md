@@ -7,7 +7,7 @@ What is a feature branch?
 [A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project.](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches)
 
 # Instructions
-1. Modify FileToModify.txt so that it looks like FinalCode.txt
+1. Modify FileToModify.txt so that it looks like the End Result outlined below. 
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
 
 # End Result
