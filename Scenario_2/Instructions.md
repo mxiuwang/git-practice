@@ -1,6 +1,15 @@
-Scenario 2: Other Intuit engineers have made changes to master, and you must rebase your changes on top of theirs."
-- master branch moves on, but your changes do not cause any merge conflicts 
-- you must rebase your changes on top of the lastest master, which includes all the other engineer's changes.
+# Rebase with no merge conflicts 
+
+This exercise reflects the scenario when other Intuit engineers have made changes to master, and you must rebase your changes on top of theirs.
+
+You will learn how to rebase your changes a feature branch on top of other engineers' changes in the master branch, assuming there are no merge conflicts. 
+
+What is rebasing?
+[Rebase integrates changes from one branch to another](https://www.git-tower.com/learn/git/glossary/rebase), in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
+
+# Instructions
+1. Create a feature branch on your local machine called `Scenario2`.
+1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`.
 
 Code on your local machine:
 

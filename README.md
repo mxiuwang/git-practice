@@ -29,3 +29,8 @@ For Each Scenario:
 1. Create a new branch in your local repo named `scenario1`, `scenario`...and so on. Do the exercise in each secenario on the respective branch.
 1. Do each exercise, save the changes you made, and push those changes to its remote counterpart in `my-fork`.
 1. Open a Pull Request (PR) to merge those changes from `my-fork` to `master-your-name` in origin. 
+
+Notes:
+* origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
+* my-fork: refers to the remote at [https://github.intuit.com/<your-name>/git-practice](https://github.intuit.com/<your-name>/git-practice)
+* Any changes made directly in Github are to simulate changes made by another Intuit engineer. Normally, you do not do this. 
