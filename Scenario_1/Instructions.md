@@ -21,15 +21,19 @@ Line 3 - Added by you
 <details>
   <summary>Solution</summary>
   
-In code:
-1. Add a new line to FileToModify.txt, save file.
-
-In Terminal:
-1. Stage your changes 
-```git stage -A```
-1. `git commit -m "your commit message" ` // commits changes
-1. `git push -u my-fork scenario1` // pushes changes from your current branch `scenario1` to the remote `my-fork`
-
-On Github:
+1. Create a new branch on your local repo for this exercise
+    ```console
+    $ git checkout -b scenario1
+    ```
+1. Add a new line to FileToModify.txt on your machine, save file.
+1. Stage and commit your changes 
+    ```console 
+    $ git stage -A
+    $ git commit -m "your message"
+    ```
+1. Push your changes from your current branch `scenario1` to the remote `my-fork`
+    ```console
+    $ git push -u my-fork scenario1
+    ```
 1. Open a Pull Request to merge changes from `my-fork` to `master-your-name` branch in origin. 
 </details>

@@ -14,6 +14,40 @@ What is rebasing?
 1. Rebase your changes on top of the new changes in the remote master-your-name
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
 
+<details>
+  <summary>Solution</summary>
+
+1. Create and checkout new branch for exercise 2 
+    ```console
+    $ git checkout -b scenario2
+    ```
+1. Make your changes
+1. Stage and commit your changes 
+    ```console
+    $ git stage -A
+    $ git commit -m "your message"
+    ```
+1. Refresh `master-your-name` with the latest changes from Git
+    ```console
+    $ git checkout master-your-name
+    $ git pull
+    $ git checkout scenario2
+    ```
+1. Rebase your changes on top of the new changes made by another engineer in master-your-name
+    ```console
+    $ git rebase master
+    ```
+    Optionally, you can check that your changes are on top of the changes imported from `master-your-name` with
+    ```console
+    $ git log
+    ```
+1. Push your changes to Github
+    ```console
+    $ git push
+    ```
+1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+</details>
+
 Code on your local machine:
 
 Branch: master (local)
