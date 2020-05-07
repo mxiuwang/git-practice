@@ -9,7 +9,7 @@ What is rebasing?
 
 # Instructions
 1. Create a feature branch on your local machine called `Scenario2`.
-1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`.
+1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important. 
 
 Code on your local machine:
 
