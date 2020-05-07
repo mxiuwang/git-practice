@@ -1,6 +1,6 @@
 # Make changes in a feature branch and merge them to master
 
-// explanations, learning outcomes
+This exercise reflects the best-case scenario, where you (an engineer) pull code down from Git, make some changes in feature branch, and push them up to to Git, and merge with remote origin with no additional changes made by other engineers, and does not cause any merge conflicts. 
 
 What is a feature branch?
 
