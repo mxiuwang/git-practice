@@ -14,6 +14,21 @@ What is rebasing?
 1. Rebase your changes on top of the new changes in the remote master-your-name
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
 
+# End Result
+Afterwards, the files in the Scenario_2 folder on in origin/master-your-name should look like:
+
+* Instructions.md
+* FileToModify.txt
+    ```
+    Line 1 
+    Line 2
+    Line 3 - Added by you 
+    ```
+* NewFile.txt
+    ```
+    // Whatever "another engineer" added
+    ```
+    
 <details>
   <summary>Solution</summary>
 
@@ -47,32 +62,3 @@ What is rebasing?
     ```
 1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
 </details>
-
-Code on your local machine:
-
-Branch: master (local)
-Line 1 
-Line 2 
-
-[You make a copy of master called "your-branch"]
-
-Branch: your-branch
-Line 1 
-Line 2
-Line 3A - Added by you 
-
-[Meanwhile, master branch has moved on]
-
-Branch: master
-Line 1
-Line 2
-
-Line 3B - Added by another engineer  
-
-You want upstream master to look like this:
-
-Branch: master (upstream)
-Line 1
-Line 2 
-Line 3A - Added by you
-Line 3B - Added by another engineer 
