@@ -1,8 +1,4 @@
 Line 1
 Line 2
-<<<<<<< HEAD
 Line 3A - Another engineer
 Line 3B - Added by me
-=======
-
->>>>>>> added by me merge conflict
