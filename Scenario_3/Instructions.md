@@ -20,5 +20,6 @@ Afterwards, `FileToModify.txt` should look like the following in origin/master:
 ```
 Line 1
 Line 2
-Line 3 - Line you chose to keep
+Line 3A - Added by another engineer
+Line 3B - Added by you
 ```
