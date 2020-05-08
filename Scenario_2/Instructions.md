@@ -2,7 +2,7 @@
 
 This exercise reflects the scenario when other Intuit engineers have made changes to master, and you must rebase your changes on top of theirs.
 
-You will learn how to rebase your changes a feature branch on top of other engineers' changes in the master branch, assuming there are no merge conflicts. 
+You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the master branch, assuming there are no merge conflicts. 
 
 What is rebasing?
 [Rebase integrates changes from one branch to another](https://www.git-tower.com/learn/git/glossary/rebase), in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 

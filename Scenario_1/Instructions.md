@@ -11,7 +11,7 @@ What is a feature branch?
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in the origin/master:
+Afterwards, `FileToModify.txt` should look like the following in origin/master:
 ```
 Line 1 
 Line 2
