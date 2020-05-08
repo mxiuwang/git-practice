@@ -11,7 +11,7 @@ What is rebasing?
 1. Create a feature branch on your local machine called `Scenario2`.
 1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important. This simulates changes made by another engineer. 
 1. On your local machine, add a new line to FileToModify.txt. These are your changes.
-1. Rebase your changes on top of the new changes in the remote master-your-name
+1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
 
 # End Result
@@ -42,7 +42,7 @@ Afterwards, the files in the Scenario_2 folder on in origin/master-your-name sho
     $ git stage -A
     $ git commit -m "your message"
     ```
-1. Refresh `master-your-name` with the latest changes from Git
+1. Update `master-your-name` with the latest changes from Git
     ```console
     $ git checkout master-your-name
     $ git pull
