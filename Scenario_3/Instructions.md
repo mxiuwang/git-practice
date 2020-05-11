@@ -74,9 +74,13 @@ Line 3B - Added by you
     $ git add -A 
     $ git rebase --continue
     ```
+1. Check your rebased changes are in the expected order
+    ```console
+    $ git log
+    ```
 1. Push your changes to Github
     ```console
-    $ git push
+    $ git push -u my-fork scenario3
     ```
 1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
 </details>
