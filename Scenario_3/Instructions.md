@@ -31,7 +31,8 @@ Line 3B - Added by you
     ```console
     $ git checkout -b scenario3
     ```
-1. Make your changes
+1. Go to Github, open `Scenario_3/FileToModify.txt` from `master-your-name`, and add a line `Line 3A - Added by another engineer`
+1. On your local `scenario3` branch, open `FileToModify.txt` and add a line `Line 3B - Added by you`.
 1. Stage and commit your changes 
     ```console
     $ git stage -A
