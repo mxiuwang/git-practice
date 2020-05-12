@@ -42,7 +42,9 @@ What is a feature branch?
     <summary>Solution</summary>
     
     1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice).
-    1. Click "open a pull request" from
+    1. Click "New pull request" (besides "Branch: master"), and scroll down to see all the file change(s) you have made. Once you have ensured the changes are correct, click the green "Create pull request" button. Add a description describing the nature of your code change if you wish. 
+    1. Git will automatically run some tests ensuring that your code change is compatible with the existing code in `origin`. You can also ask reviewers, labels, or assign this task to someone else from the column on the right-hand side. 
+    1. Once all checks are complete, you can click "Merge pull request", and "Confirm merge". You also can optionally include some comments describing the merged content. 
     </details>
 
 # End Result
