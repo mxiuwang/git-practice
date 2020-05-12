@@ -42,7 +42,7 @@ What is a feature branch?
     <summary>Solution</summary>
     
     1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice).
-    1. Click "open a pull request"
+    1. Click "open a pull request" from
     </details>
 
 # End Result
