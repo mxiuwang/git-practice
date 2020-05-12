@@ -50,7 +50,7 @@ What is a feature branch?
     </details>
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in origin/master:
+Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
 ```
 Line 1 
 Line 2
