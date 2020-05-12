@@ -7,7 +7,7 @@ What is a feature branch?
 [A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project.](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches)
 
 # Instructions
-1. On your local machine, check out a new branch called `scenario1`.
+1. On your local machine, create a new branch called `scenario1`.
     <details>
     <summary>Solution</summary>
 
@@ -16,26 +16,33 @@ What is a feature branch?
     ```
     </details>
 
-1. In the `scenario1` branch, modify FileToModify.txt so that it looks like the End Result outlined below. 
+1. In the `scenario1` branch, modify FileToModify.txt using a text editor of your choice so that it looks like the End Result outlined below. 
+1. Stage changes (on your local machine)
     <details>
     <summary>Solution</summary>
     
-    Add a new line to FileToModify.txt on your machine, save file.
+    ```console 
+    $ git stage -A
+    ```
     </details>
-1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
+1. Commit changes
     <details>
     <summary>Solution</summary>
     
-    1. Stage and commit your changes 
-        ```console 
-        $ git stage -A
-        $ git commit -m "your message"
-        ```
-    1. Push your changes from your current branch `scenario1` to the remote `my-fork`
-        ```console
-        $ git push -u my-fork scenario1
-        ```
-    1. Open a Pull Request to merge changes from `my-fork` to `master-your-name` branch in origin. 
+    ```console 
+    $ git commit -m "your message"
+    ```
+    </details>
+1. Push changes from your current local `scenario1` branch to remote `my-fork`
+    ```console
+    $ git push -u my-fork scenario1
+    ```
+1. Open a Pull Request (PR) on the Github website to merge your changes with origin. 
+    <details>
+    <summary>Solution</summary>
+    
+    1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice).
+    1. Click "open a pull request"
     </details>
 
 # End Result
