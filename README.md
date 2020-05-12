@@ -32,5 +32,5 @@ For Each Scenario:
 
 Notes:
 * origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
-* my-fork: refers to the remote at [https://github.intuit.com/<your-name>/git-practice](https://github.intuit.com/<your-name>/git-practice)
+* my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice]`
 * Any changes made directly in Github are to simulate changes made by another Intuit engineer. Normally, you do not do this. 
