@@ -52,7 +52,13 @@ Setup:
     origin	git@github.intuit.com:Albertasaurus/git-practice.git (push)
     ```
 
-Notes:
+Diagram depicting the realtionship between `origin`, `my-fork`, and your local repositories.
+
+![Git repo setup overview](img/overview_diagram.png)
+[//]: # (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1)
+
+Additional Notes:
+* Each scenario is contained within a folder, and within each folder is a readme.md detailling all the learning goals, instructions, and solutions to each exercise. 
 * origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
 * my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice`
 * Any changes made directly in Github are to simulate changes made by another Intuit engineer. Normally, you do not do this. 

@@ -6,6 +6,16 @@ What is a feature branch?
 
 [A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project.](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches)
 
+What is a Git flow diagram?
+
+A Git flow diagram is a diagram showing the history of changes made by all developers to a Github repo. 
+
+For example:
+```
+A---B---C master 
+```
+represents 3 sequential updates to the branch master.
+
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
     <details>
@@ -48,6 +58,16 @@ What is a feature branch?
     1. Once all checks have passed, you can click "Merge pull request", then "Confirm merge". You also can optionally include some comments describing the merged content. 
     1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-your-name` branch, and see that your changes are merged.
     </details>
+
+# Git Diagram
+
+Git Diagram for Scenario 1.
+
+This is what you want your final Git folder to look like:
+```
+A---B master-your-name
+```
+Where A is the existing code in `master-your-name`, and B is the code you added.
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
