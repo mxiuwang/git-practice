@@ -6,16 +6,6 @@ What is a feature branch?
 
 [A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project.](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches)
 
-What is a Git flow diagram?
-
-A Git flow diagram is a diagram showing the history of changes made by all developers to a Github repo. 
-
-For example:
-```
-A---B---C master 
-```
-represents 3 sequential updates to the branch master.
-
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
     <details>
@@ -23,6 +13,15 @@ represents 3 sequential updates to the branch master.
 
     ```console
     $ git checkout -b scenario1
+    ```
+    </details>
+    <details>
+
+    <summary>Commit Diagram</summary>
+
+    Each letter represents a commit. Currently, both `master-your-name` and `my-fork` is pointing at the same commit (the existing content in the repo).
+    ```
+    A---B master-your-name, my-fork
     ```
     </details>
 
@@ -43,6 +42,16 @@ represents 3 sequential updates to the branch master.
     $ git commit -m "your message"
     ```
     </details>
+
+    <summary>Commit Diagram</summary>
+
+    `my-fork` is pointing at your new commit, C.
+    ```
+      C my-fork
+     /
+    A---B master-your-name
+    ```
+    </details>
 1. Push changes from your current local `scenario1` branch to remote `my-fork`
     ```console
     $ git push -u my-fork scenario1
@@ -59,15 +68,14 @@ represents 3 sequential updates to the branch master.
     1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-your-name` branch, and see that your changes are merged.
     </details>
 
-# Git Diagram
+    <details>
+    <summary>Commit Diagram</summary>
 
-Git Diagram for Scenario 1.
-
-This is what you want your final Git folder to look like:
-```
-A---B master-your-name
-```
-Where A is the existing code in `master-your-name`, and B is the code you added.
+    After `my-fork` is merged with `master-your-name`, both remotes are pointing at your latest commit, C.
+    ```
+    A---B--C master-your-name, my-fork
+    ```
+    </details>
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
