@@ -15,8 +15,8 @@ What is a feature branch?
     $ git checkout -b scenario1
     ```
     </details>
-    <details>
 
+    <details>
     <summary>Commit Diagram</summary>
 
     Each letter represents a commit. Currently, both `master-your-name` and `my-fork` is pointing at the same commit (the existing content in the repo).
@@ -42,20 +42,63 @@ What is a feature branch?
     $ git commit -m "your message"
     ```
     </details>
-
+    <details>
     <summary>Commit Diagram</summary>
 
-    `my-fork` is pointing at your new commit, C.
+    Local Repo: 
+    
+    Branch `scenario1` is pointing at your new commit, C.
     ```
-      C my-fork
+      C scenario1
      /
+    A---B master-your-name
+    ```
+
+    `my-fork`: 
+    
+    no changes have been made to remote `my-fork`
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`: 
+    
+    no changes have been made to remote `origin`
+    ```
     A---B master-your-name
     ```
     </details>
 1. Push changes from your current local `scenario1` branch to remote `my-fork`
+    <details>
+    <summary>Solution</summary>
+    
     ```console
     $ git push -u my-fork scenario1
     ```
+    </details>
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Local Repo: 
+    
+    ```
+      C scenario1
+     /
+    A---B master-your-name
+    ```
+
+    `my-fork`: 
+    ```
+      C scenario1
+     /
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+    A---B master-your-name
+    ```
+    </details>
 1. Open a Pull Request (PR) on the Github website to merge your changes with origin. 
     <details>
     <summary>Solution</summary>
@@ -71,11 +114,44 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
-    After `my-fork` is merged with `master-your-name`, both remotes are pointing at your latest commit, C.
+    Local Repo: 
+    
     ```
-    A---B--C master-your-name, my-fork
+      C scenario1
+     /
+    A---B master-your-name
+    ```
+
+    `my-fork`: 
+    ```
+      C scenario1
+     /
+    A---B master-your-name
+    ```
+
+    `origin`:
+
+    After `my-fork` is merged with `master-your-name`, `master-your-name` will also point at your latest commit, C.
+    ```
+    A---B---C master-your-name
     ```
     </details>
+1. Check that your changes are pushed and merged correctly
+    <details>
+    <summary>Solution</summary>
+
+    ```console
+    $ git log
+    ```
+    The [`git log`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) command shows the commit log, containing all the commits and merges by all authors in this project, in reverse chronological order. 
+
+    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits that have not been pushed should be stacked underneath. 
+
+    `(origin/master-your-name, origin/HEAD)` should point to the lastest commit you pushed into `origin`, or `master-your-name`, and any other commits you pushed into this repo should be stacked underneath.
+    
+   `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
+
+    </detail>
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
