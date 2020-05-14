@@ -151,6 +151,7 @@ What is a feature branch?
     
    `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
 
+    If everything is correct, `(HEAD -> master-your-name)`,  `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` should now all point to the 
     </detail>
 
 # End Result
