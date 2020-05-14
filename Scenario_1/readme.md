@@ -109,6 +109,32 @@ What is a feature branch?
     1. Git will automatically run some tests ensuring that your code change is compatible with the existing code in `origin`. If checks fail, there are some issues you need to fix in your code before you're able to merge it. You can also ask reviewers, labels, or assign this task to someone else from the column on the right-hand side. 
     1. Once all checks have passed, you can click "Merge pull request", then "Confirm merge". You also can optionally include some comments describing the merged content. 
     1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-your-name` branch, and see that your changes are merged.
+
+1. Check that your changes are pushed and merged correctly
+    <details>
+    <summary>Solution</summary>
+    
+    Update your local repo, and its pointers.
+    ``` console
+    $ git pull
+    ```
+
+    Check your [`commit logs`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), which contains all commits and merges by all authors in this project, in reverse-chronological order:
+    ```console
+    $ git log
+    ```
+
+    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits should be stacked underneath. 
+
+    `(origin/master-your-name, origin/HEAD)` should point to the lastest commit you pushed into `origin`, or `master-your-name`, and any other commits you pushed into this repo should be stacked underneath.
+    
+   `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
+
+    If everything is correct, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, while `(my-fork/master)` should point to commit B. This is because when `my-fork` and `origin` were merged through a PR on Github, your local machine was not notified.
+
+    If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, and `(my-fork/master)` should now point to commit B (or your last pushed commit to `my-fork`).
+    </detail>
+
     </details>
 
     <details>
@@ -136,30 +162,6 @@ What is a feature branch?
     A---B---C master-your-name
     ```
     </details>
-1. Check that your changes are pushed and merged correctly
-    <details>
-    <summary>Solution</summary>
-
-    ```console
-    $ git log
-    ```
-    The [`git log`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) command shows the commit log, containing all the commits and merges by all authors in this project, in reverse chronological order. 
-
-    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits should be stacked underneath. 
-
-    `(origin/master-your-name, origin/HEAD)` should point to the lastest commit you pushed into `origin`, or `master-your-name`, and any other commits you pushed into this repo should be stacked underneath.
-    
-   `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
-
-    If everything is correct, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, while `(my-fork/master)` should point to commit B. This is because when `my-fork` and `origin` were merged through a PR on Github, your local machine was not notified.
-
-    You can refresh your local repo (without automatically merging them into your local repo) by:
-    ```console
-    $ git fetch
-    ```
-
-    If you run the `git log` command once more, `(HEAD -> master-your-name)`,  `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` should now all point to commit C.
-    </detail>
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
