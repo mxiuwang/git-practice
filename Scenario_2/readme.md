@@ -8,6 +8,28 @@ What is rebasing?
 [Rebase integrates changes from one branch to another](https://www.git-tower.com/learn/git/glossary/rebase), in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
 
 # Instructions
+1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.
+    <details>
+    <summary>Instructions</summary>
+
+    Ensure all your changes are pushed to Github
+    ```console
+    $ git stage -A
+    $ git commit -m "your message"
+    $ git push -u my-fork master 
+    ```
+
+    Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
+    ```console
+    $ git pull 
+    $ git fetch 
+    ```
+
+    Ensure that `(HEAD -> master-your-name)`, `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` are all pointing to the latest commit 
+    ```console
+    $ git log
+    ```
+    </details>
 1. Create a feature branch on your local machine called `Scenario2`.
     <details>
     <summary>Solution</summary>
