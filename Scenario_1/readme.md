@@ -145,7 +145,7 @@ What is a feature branch?
     ```
     The [`git log`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) command shows the commit log, containing all the commits and merges by all authors in this project, in reverse chronological order. 
 
-    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits that have not been pushed should be stacked underneath. 
+    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits should be stacked underneath. 
 
     `(origin/master-your-name, origin/HEAD)` should point to the lastest commit you pushed into `origin`, or `master-your-name`, and any other commits you pushed into this repo should be stacked underneath.
     
