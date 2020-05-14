@@ -151,7 +151,14 @@ What is a feature branch?
     
    `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
 
-    If everything is correct, `(HEAD -> master-your-name)`,  `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` should now all point to the 
+    If everything is correct, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, while `(my-fork/master)` should point to commit B. This is because when `my-fork` and `origin` were merged through a PR on Github, your local machine was not notified.
+
+    You can refresh your local repo (without automatically merging them into your local repo) by:
+    ```console
+    $ git fetch
+    ```
+
+    If you run the `git log` command once more, `(HEAD -> master-your-name)`,  `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` should now all point to commit C.
     </detail>
 
 # End Result
