@@ -29,12 +29,42 @@ What is rebasing?
     $ git log
     ```
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
+
+    Local repo/`myfork`/`origin`:
+    ```
+    A---B master-your-name
+    ```
+    </details>
 1. Create a feature branch on your local machine called `Scenario2`.
     <details>
     <summary>Solution</summary>
     
     ```console
     $ git checkout -b scenario2
+    ```
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Local repo:
+    ```
+    A---B master-your-name, scenario2
+    ```
+
+    `my-fork`:
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+    A---B master-your-name
     ```
     </details>
 1. Perform your changes on the `scenario2` branch, specifically on the  `FileToModify.txt` in the `Scenario_2` folder. 
@@ -53,6 +83,27 @@ What is rebasing?
         $ git commit -m "your message"
         ```
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Local repo:
+    ```
+      D scenario2
+     /
+    A---B master-your-name
+    ```
+
+    `my-fork`:
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+    A---B master-your-name
+    ```
+    </details>
 1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important. This simulates changes made by another engineer. 
 
     <details>
@@ -61,6 +112,29 @@ What is rebasing?
     1. On the "Code" page of your `master-student-name` branch in origin, click "Create new file".
     1. Name your file `NewFile.txt` and add some text.
     1. Click "Commit changes" 
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Local repo:
+    ```
+      D scenario2
+     /
+    A---B master-your-name
+    ```
+
+    `my-fork`:
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+      C another-engineer
+     /
+    A---B master-your-name
+    ```
     </details>
 1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`
     <details>
@@ -81,6 +155,27 @@ What is rebasing?
         $ git log
         ```
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Local repo:
+    ```
+    A---B---C---D master-your-name
+    ```
+
+    `my-fork`:
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+      C another-engineer
+     /
+    A---B master-your-name
+    ```
+    </details>
 1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
     <details>
     <summary>Solution</summary>
@@ -89,7 +184,35 @@ What is rebasing?
         ```console
         $ git push
         ```
+        <details>
+        <summary>Commit Diagram</summary>
+
+        Local repo:
+        ```
+        A---B---C---D master-your-name
+        ```
+
+        `my-fork`:
+        ```
+        A---B---C---D master-your-name
+        ```
+
+        `origin`:
+        ```
+          C another-engineer
+         /
+        A---B master-your-name
+        ```
+        </details>
     1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+        <details>
+        <summary>Commit Diagram</summary>
+
+        Local repo/`my-fork`/`origin`:
+        ```
+        A---B---C---D master-your-name
+        ```
+        </details>
     1. If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit D, and `(my-fork/master)` should point to the last commit you pushed commit to `my-fork`.
     </details>
     

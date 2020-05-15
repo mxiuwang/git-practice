@@ -21,7 +21,7 @@ What is a feature branch?
 
     Below are the commit diagrams for your local repo, remote `my-fork`, and remote `origin`. `A` and `B` represent existing commits in this project, while `C` or later letters (in future diagrams) represent new changes a user introduces. 
 
-    Currently, the local repo, `master-your-name` and `my-fork` all point to the same commit (the existing content in the repo).
+    Currently, the local repo, `my-fork` and `origin` all point to the same commit (the existing content in the repo).
 
     Local repo:
     ```
