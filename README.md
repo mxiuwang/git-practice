@@ -55,7 +55,7 @@ Setup:
 Diagram depicting the realtionship between `origin`, `my-fork`, and your local repositories.
 
 ![Git repo setup overview](img/overview_diagram.png)
-[//]: # (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1)
+<!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1) -->
 
 Additional Notes:
 * Each scenario is contained within a folder, and within each folder is a readme.md detailling all the learning goals, instructions, and solutions to each exercise. 
