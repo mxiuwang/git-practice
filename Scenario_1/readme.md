@@ -20,8 +20,20 @@ What is a feature branch?
     <summary>Commit Diagram</summary>
 
     Each letter represents a commit. Currently, both `master-your-name` and `my-fork` is pointing at the same commit (the existing content in the repo).
+
+    Local repo:
     ```
-    A---B master-your-name, my-fork
+    A---B master-your-name
+    ```
+
+    `my-fork`:
+    ```
+    A---B master-your-name
+    ```
+
+    `origin`:
+    ```
+    A---B master-your-name
     ```
     </details>
 
