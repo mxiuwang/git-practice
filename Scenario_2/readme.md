@@ -22,10 +22,9 @@ What is rebasing?
     Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
     ```console
     $ git pull 
-    $ git fetch 
     ```
 
-    Ensure that `(HEAD -> master-your-name)`, `(origin/master-your-name, origin/HEAD)`, and `(my-fork/master)` are all pointing to the latest commit 
+    Ensure that `(HEAD -> master-your-name)`, and `(origin/master-your-name, origin/HEAD)` are pointing to the latest commit, and `(my-fork/master)` contains the latest changes. 
     ```console
     $ git log
     ```
@@ -55,6 +54,14 @@ What is rebasing?
         ```
     </details>
 1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important. This simulates changes made by another engineer. 
+
+    <details>
+    <summary>Solution</summary>
+
+    1. On the "Code" page of your `master-student-name` branch in origin, click "Create new file".
+    1. Name your file `NewFile.txt` and add some text.
+    1. Click "Commit changes" 
+    </details>
 1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`
     <details>
     <summary>Solution</summary>
@@ -69,7 +76,7 @@ What is rebasing?
         ```console
         $ git rebase master
         ```
-    1. Optionally, you can check that your changes are on top of the changes imported from `master-your-name` with
+    1. Check that your changes are on top of the changes imported from `master-your-name` with
         ```console
         $ git log
         ```
@@ -83,8 +90,9 @@ What is rebasing?
         $ git push
         ```
     1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+    1. If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit D, and `(my-fork/master)` should point to the last commit you pushed commit to `my-fork`.
     </details>
-
+    
 # End Result
 Afterwards, the files in the Scenario_2 folder on in origin/master-your-name should look like:
 

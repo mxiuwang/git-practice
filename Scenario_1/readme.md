@@ -19,11 +19,13 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
-    Each letter represents a commit. Currently, both `master-your-name` and `my-fork` is pointing at the same commit (the existing content in the repo).
+    Below are the commit diagrams for your local repo, remote `my-fork`, and remote `origin`. `A` and `B` represent existing commits in this project, while `C` or later letters (in future diagrams) represent new changes a user introduces. 
+
+    Currently, the local repo, `master-your-name` and `my-fork` all point to the same commit (the existing content in the repo).
 
     Local repo:
     ```
-    A---B master-your-name
+    A---B master-your-name, scenario1
     ```
 
     `my-fork`:
@@ -144,7 +146,7 @@ What is a feature branch?
 
     If everything is correct, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, while `(my-fork/master)` should point to commit B. This is because when `my-fork` and `origin` were merged through a PR on Github, your local machine was not notified.
 
-    If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, and `(my-fork/master)` should now point to commit B (or your last pushed commit to `my-fork`).
+    If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, and `(my-fork/master)` should point to the last commit you pushed commit to `my-fork`.
     </detail>
 
     </details>
