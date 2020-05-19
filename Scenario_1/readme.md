@@ -22,19 +22,19 @@ What is a feature branch?
     Below are the commit diagrams for your local repo, remote `my-fork`, and remote `origin`. `A` and `B` represent existing commits in this project, while `C` or later letters (in future diagrams) represent new changes a user introduces. 
 
     Currently, the local repo, `my-fork` and `origin` all point to the same commit (the existing content in the repo).
-
-    Local repo:
     ```
+    Our local repo:
+    
     A---B master-your-name, scenario1
-    ```
+    
 
-    `my-fork`:
-    ```
+    Remote: `my-fork`:
+    
     A---B master-your-name
-    ```
+    
 
-    `origin`:
-    ```
+    Remote `origin`:
+    
     A---B master-your-name
     ```
     </details>
@@ -59,26 +59,27 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
-    Local Repo: 
-    
-    Branch `scenario1` is pointing at your new commit, C.
     ```
+    Our local Repo: 
+
+    Branch `scenario1` is pointing at your new commit, C.
+    
       C scenario1
      /
     A---B master-your-name
-    ```
-
-    `my-fork`: 
     
-    no changes have been made to remote `my-fork`
-    ```
-    A---B master-your-name
-    ```
 
-    `origin`: 
+    Remote `my-fork`: 
+
+    no changes have been made to remote `my-fork`
+    
+    A---B master-your-name
+    
+
+    Remote `origin`: 
     
     no changes have been made to remote `origin`
-    ```
+    
     A---B master-your-name
     ```
     </details>
@@ -93,23 +94,23 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
     Local Repo: 
     
-    ```
       C scenario1
      /
     A---B master-your-name
-    ```
+    
 
-    `my-fork`: 
-    ```
+    Remote `my-fork`: 
+
       C scenario1
      /
     A---B master-your-name
-    ```
 
-    `origin`:
-    ```
+
+    Remote `origin`:
+    
     A---B master-your-name
     ```
     </details>
@@ -154,25 +155,25 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
-    Local Repo: 
+    ```
+    Our local Repo: 
     
-    ```
       C scenario1
      /
     A---B master-your-name
-    ```
 
-    `my-fork`: 
-    ```
+
+    Remote `my-fork`: 
+    
       C scenario1
      /
     A---B master-your-name
-    ```
 
-    `origin`:
+
+    Remote `origin`:
 
     After `my-fork` is merged with `master-your-name`, `master-your-name` will also point at your latest commit, C.
-    ```
+    
     A---B---C master-your-name
     ```
     </details>
