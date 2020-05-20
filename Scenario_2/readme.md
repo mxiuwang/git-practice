@@ -35,8 +35,9 @@ What is rebasing?
 
     The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
 
-    Local repo/`myfork`/`origin`:
     ```
+    Our local repo/remote my-fork/remote origin:
+    
     A---B master-your-name
     ```
     </details>
@@ -53,17 +54,17 @@ What is rebasing?
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
     A---B master-your-name, scenario2
 
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
     A---B master-your-name
     ```
@@ -89,19 +90,19 @@ What is rebasing?
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
       D scenario2
      /
     A---B master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
     A---B master-your-name
     ```
@@ -120,19 +121,19 @@ What is rebasing?
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
       D scenario2
      /
     A---B master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
       C another-engineer
      /
@@ -163,17 +164,17 @@ What is rebasing?
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
     A---B---C---D master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
       C another-engineer
      /
@@ -191,18 +192,18 @@ What is rebasing?
         <details>
         <summary>Commit Diagram</summary>
 
-        Local repo:
+        Our local repo:
         ```
         A---B---C---D master-your-name
-        ```
+        
 
-        `my-fork`:
-        ```
+        Remote my-fork:
+        
         A---B---C---D master-your-name
-        ```
+        
 
-        `origin`:
-        ```
+        Remote origin:
+        
           C another-engineer
          /
         A---B master-your-name
@@ -213,7 +214,7 @@ What is rebasing?
         <summary>Commit Diagram</summary>
 
         ```
-        Local repo/`my-fork`/`origin`:
+        our local repo/remote my-fork/remote origin:
         
         A---B---C---D master-your-name
         ```

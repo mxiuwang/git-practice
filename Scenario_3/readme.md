@@ -36,7 +36,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
 
     ```
-    Local repo/`myfork`/`origin`:
+    Our local repo/remote my-fork/remote origin:
     
     A---B master-your-name
     ```
@@ -55,17 +55,17 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
     A---B master-your-name, scenario2
 
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
     A---B master-your-name
     ```
@@ -90,19 +90,19 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
       D scenario2
      /
     A---B master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
     A---B master-your-name
     ```
@@ -124,19 +124,19 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
       D scenario2
      /
     A---B master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
       C another-engineer
      /
@@ -194,17 +194,17 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo:
+    Our local repo:
     
     A---B---C---D master-your-name
     
 
-    `my-fork`:
+    Remote my-fork:
     
     A---B master-your-name
     
 
-    `origin`:
+    Remote origin:
     
       C another-engineer
      /
@@ -220,6 +220,26 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         ```console
         $ git push -u my-fork scenario3
         ```
+        <details>
+        <summary>Commit Diagram</summary>
+
+        Our local repo:
+        ```
+        A---B---C---D master-your-name
+        
+
+        Remote my-fork:
+        
+        A---B---C---D master-your-name
+        
+
+        Remote origin:
+        
+          C another-engineer
+         /
+        A---B master-your-name
+        ```
+        </details>
     1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
     </details>
 
@@ -227,7 +247,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <summary>Commit Diagram</summary>
 
     ```
-    Local repo/`my-fork`/`origin`:
+    Our local repo/remote my-fork/remote origin:
     
     A---B---C---D master-your-name
     ```
