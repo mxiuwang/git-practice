@@ -28,12 +28,12 @@ What is a feature branch?
     A---B master-your-name, scenario1
     
 
-    Remote: `my-fork`:
+    Remote "my-fork":
     
     A---B master-your-name
     
 
-    Remote `origin`:
+    Remote "origin":
     
     A---B master-your-name
     ```
@@ -53,7 +53,7 @@ What is a feature branch?
     <summary>Solution</summary>
     
     ```console 
-    $ git commit -m "your message"
+    $ git commit -m "added a line to the end"
     ```
     </details>
     <details>
@@ -62,21 +62,19 @@ What is a feature branch?
     ```
     Our local Repo: 
 
-    Branch `scenario1` is pointing at your new commit, C.
+    Branch "scenario1" is pointing at your new commit, C.
     
       C scenario1
      /
     A---B master-your-name
     
 
-    Remote `my-fork`: 
-
-    no changes have been made to remote `my-fork`
+    Remote "my-fork": 
     
     A---B master-your-name
     
 
-    Remote `origin`: 
+    Remote "origin": 
     
     no changes have been made to remote `origin`
     
@@ -95,21 +93,21 @@ What is a feature branch?
     <summary>Commit Diagram</summary>
 
     ```
-    Local Repo: 
+    Our local Repo: 
     
       C scenario1
      /
     A---B master-your-name
     
 
-    Remote `my-fork`: 
+    Remote "my-fork": 
 
       C scenario1
      /
     A---B master-your-name
 
 
-    Remote `origin`:
+    Remote "origin":
     
     A---B master-your-name
     ```
@@ -118,8 +116,8 @@ What is a feature branch?
     <details>
     <summary>Solution</summary>
     
-    1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice).
-    1. Click "New pull request" (besides "Branch: master-<your-name>"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
+    1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at `github.intuit.com/<your-name>/git-practice`
+    1. Click "New pull request" (besides "Branch: master-your-name"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
     1. Scroll down to see all the file change(s) you have made. Once you have ensured the changes are correct, click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. 
     1. Git will automatically run some tests ensuring that your code change is compatible with the existing code in `origin`. If checks fail, there are some issues you need to fix in your code before you're able to merge it. You can also ask reviewers, labels, or assign this task to someone else from the column on the right-hand side. 
     1. Once all checks have passed, you can click "Merge pull request", then "Confirm merge". You also can optionally include some comments describing the merged content. 
@@ -163,16 +161,16 @@ What is a feature branch?
     A---B master-your-name
 
 
-    Remote `my-fork`: 
+    Remote "my-fork": 
     
       C scenario1
      /
     A---B master-your-name
 
 
-    Remote `origin`:
+    Remote "origin":
 
-    After `my-fork` is merged with `master-your-name`, `master-your-name` will also point at your latest commit, C.
+    After "my-fork" is merged with "master-your-name", "master-your-name" will also point at your latest commit, C.
     
     A---B---C master-your-name
     ```
