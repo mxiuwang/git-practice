@@ -52,18 +52,19 @@ What is rebasing?
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
     Local repo:
-    ```
+    
     A---B master-your-name, scenario2
-    ```
+
 
     `my-fork`:
-    ```
+    
     A---B master-your-name
-    ```
+    
 
     `origin`:
-    ```
+    
     A---B master-your-name
     ```
     </details>
@@ -87,20 +88,21 @@ What is rebasing?
     <details>
     <summary>Commit Diagram</summary>
 
-    Local repo:
     ```
+    Local repo:
+    
       D scenario2
      /
     A---B master-your-name
-    ```
+    
 
     `my-fork`:
-    ```
+    
     A---B master-your-name
-    ```
+    
 
     `origin`:
-    ```
+    
     A---B master-your-name
     ```
     </details>
@@ -117,20 +119,21 @@ What is rebasing?
     <details>
     <summary>Commit Diagram</summary>
 
-    Local repo:
     ```
+    Local repo:
+    
       D scenario2
      /
     A---B master-your-name
-    ```
+    
 
     `my-fork`:
-    ```
+    
     A---B master-your-name
-    ```
+    
 
     `origin`:
-    ```
+    
       C another-engineer
      /
     A---B master-your-name
@@ -159,18 +162,19 @@ What is rebasing?
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
     Local repo:
-    ```
+    
     A---B---C---D master-your-name
-    ```
+    
 
     `my-fork`:
-    ```
+    
     A---B master-your-name
-    ```
+    
 
     `origin`:
-    ```
+    
       C another-engineer
      /
     A---B master-your-name
@@ -208,8 +212,9 @@ What is rebasing?
         <details>
         <summary>Commit Diagram</summary>
 
-        Local repo/`my-fork`/`origin`:
         ```
+        Local repo/`my-fork`/`origin`:
+        
         A---B---C---D master-your-name
         ```
         </details>

@@ -8,12 +8,66 @@ What is a merge conflict?
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # Instructions 
+1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.
+    <details>
+    <summary>Instructions</summary>
+
+    Ensure all your changes are pushed to Github
+    ```console
+    $ git stage -A
+    $ git commit -m "your message"
+    $ git push -u my-fork master 
+    ```
+
+    Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
+    ```console
+    $ git pull 
+    ```
+
+    Ensure that `(HEAD -> master-your-name)`, and `(origin/master-your-name, origin/HEAD)` are pointing to the latest commit, and `(my-fork/master)` contains the latest changes. 
+    ```console
+    $ git log
+    ```
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
+
+    ```
+    Local repo/`myfork`/`origin`:
+    
+    A---B master-your-name
+    ```
+    </details>
+
 1. Create a feature branch on your local machine called `scenario3`
     <details>
     <summary>Solution</summary>
     
     ```console
     $ git checkout -b scenario3
+    ```
+    </details>
+    
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Local repo:
+    
+    A---B master-your-name, scenario2
+
+
+    `my-fork`:
+    
+    A---B master-your-name
+    
+
+    `origin`:
+    
+    A---B master-your-name
     ```
     </details>
 1. Perform your changes on the `scenario3` branch, specifically on the `FileToModify.txt` in the `Scenario_3` folder on your local machine. 
@@ -32,6 +86,27 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         $ git commit -m "your message"
         ```
     </details>
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Local repo:
+    
+      D scenario2
+     /
+    A---B master-your-name
+    
+
+    `my-fork`:
+    
+    A---B master-your-name
+    
+
+    `origin`:
+    
+    A---B master-your-name
+    ```
+    </details>
 1. Simulate changes made by another engineering by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file.
     <details>
     <summary>Solution</summary>
@@ -43,6 +118,30 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         Line 3B - Added by another engineer
         ```
     1. Commit and push your changes on Github
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Local repo:
+    
+      D scenario2
+     /
+    A---B master-your-name
+    
+
+    `my-fork`:
+    
+    A---B master-your-name
+    
+
+    `origin`:
+    
+      C another-engineer
+     /
+    A---B master-your-name
+    ```
     </details>
 1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`. Resolve any merge conflicts. 
     <details>
@@ -91,6 +190,28 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         ```
     </details>
     
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Local repo:
+    
+    A---B---C---D master-your-name
+    
+
+    `my-fork`:
+    
+    A---B master-your-name
+    
+
+    `origin`:
+    
+      C another-engineer
+     /
+    A---B master-your-name
+    ```
+    </details>
+    
 1. Merge changes with the `master-your-name` branch, push them to `my-fork`, and open a PR to merge your changes with origin. 
     <details>
     <summary>Solution</summary>
@@ -100,8 +221,18 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         $ git push -u my-fork scenario3
         ```
     1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
-</details>
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Local repo/`my-fork`/`origin`:
+    
+    A---B---C---D master-your-name
+    ```
+    </details>
+    
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in origin/master:
