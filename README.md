@@ -2,7 +2,7 @@
 About this Repo:
 This is a repository is a Git practice package with exercises designed to help you develop your Git skills, in the way it is most commonly used at Intuit! This repo is intended for any Intuit employee learning Git for the first time, or engineers wishing to familiarize themselves with the Git workflow at Intuit. 
 
-The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario contains a set of instructions, some StartCode an engineer will attempt to convert to the FinalCode, and the solution. 
+The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario is contained within a folder, and within each folder is a readme.md detailling all the learning goals, instructions, and solutions to each exercise.
 
 
 Setup:
@@ -56,9 +56,8 @@ Diagram depicting the realtionship between `origin`, `my-fork`, and your local r
 
 ![Git repo setup overview](img/overview_diagram.png)
 <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1) -->
-
-Additional Notes:
-* Each scenario is contained within a folder, and within each folder is a readme.md detailling all the learning goals, instructions, and solutions to each exercise. 
 * origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
 * my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice`
+
+Additional Notes:
 * Any changes made directly in Github are to simulate changes made by another Intuit engineer. Normally, you do not do this. 
