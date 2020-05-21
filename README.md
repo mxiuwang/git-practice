@@ -5,6 +5,7 @@ The repository contains common scenarios that Intuit engineers may face. In gene
 
 
 # Setup
+test
 Perform these instructions once before doing the exercises:
 1. Clone "git-practice" repo on your local machine by copying the URL of the `Albertasaurus/git-practice` repo from the Github website. Specifically, copy the SSH URL from the "Clone or download" menu on the right right. 
 
