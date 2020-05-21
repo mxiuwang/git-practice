@@ -70,8 +70,7 @@ What is a feature branch?
     
 
     Remote "my-fork": 
-    
-    A---B master-your-name
+    A---B scenario1
     
 
     Remote "origin": 
