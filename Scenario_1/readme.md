@@ -90,6 +90,13 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
+    Check your [`commit logs`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), which contains all commits and merges by all authors in this project, in reverse-chronological order:
+    ```console
+    $ git log
+    ```
+
+    Try to match each pointer in the above commit logs to the commit diagrams below.
+    
     ```
     Our local Repo: 
     
@@ -117,7 +124,9 @@ What is a feature branch?
     1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at `github.intuit.com/<your-name>/git-practice`
     1. Click "New pull request" (beside "Branch: master-your-name"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
     1. Scroll down to see all the file change(s) you have made, and ensure they are correct. Ensure the "head repository" is your your fork, the "base repository" is Albertasaurus/git-practice, and that the compared and base branches are both `master-your-name`.
-    1. Click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. Once all checks have passed, you can click "Merge pull request", then "Confirm merge". 
+    1. Click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. Once all checks have passed, choose "Squash and merge" from the dropdown beside "Merge pull request", then "Confirm merge". 
+
+        "[Squash and merge](https://github.blog/2016-04-01-squash-your-commits/#enter-commit-squashing)" takes all the commits pushed to `my-fork` and pushes them into `master-your-name` in Albertasaurus as one single commit.
     1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-your-name` branch, and see that your changes are merged.
 
 1. Check that your changes are pushed and merged correctly
@@ -130,7 +139,7 @@ What is a feature branch?
     $ git pull
     ```
 
-    Check your [`commit logs`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), which contains all commits and merges by all authors in this project, in reverse-chronological order:
+    Check your commit logs 
     ```console
     $ git log
     ```
@@ -156,6 +165,7 @@ What is a feature branch?
     A---B---C' master-your-name
     ```
     </details>
+1. Delete branch `scenario1` by going to the `Pull requests --> Closed`, selecting your most recent PR, and clicking `delete branch`. 
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
