@@ -126,25 +126,14 @@ What is a feature branch?
     
     Update your local repo, and its pointers. 
     ``` console
-    $ git pull origin master-your-name:master-your-name # pull from origin master-your-name to local master-your-name
+    $ git checkout master-<your-name>
+    $ git pull
     ```
 
     Check your [`commit logs`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), which contains all commits and merges by all authors in this project, in reverse-chronological order:
     ```console
     $ git log
     ```
-
-    `(HEAD -> master-your-name)` should be at the top, pointing to the latest commit you made on your local machine. Any other local commits should be stacked underneath. 
-
-    `(origin/master-your-name, origin/HEAD)` should point to the lastest commit you pushed into `origin`, or `master-your-name`, and any other commits you pushed into this repo should be stacked underneath.
-    
-   `(my-fork/master)` should point to the latest commit you pushed into `my-fork`, and any other commits you pushed into this repo should be stack underneath.
-
-    If everything is correct, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, while `(my-fork/master)` should point to commit B. This is because when `my-fork` and `origin` were merged through a PR on Github, your local machine was not notified.
-
-    If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit C, and `(my-fork/master)` should point to the last commit you pushed commit to `my-fork`.
-    </detail>
-
     </details>
 
     <details>
@@ -153,23 +142,19 @@ What is a feature branch?
     ```
     Our local Repo: 
     
-      C scenario1
-     /
-    A---B master-your-name
+    A---B---C' master-your-name
 
 
     Remote "my-fork": 
     
-      C scenario1
-     /
     A---B master-your-name
 
 
     Remote "origin":
 
-    After "my-fork" is merged with "master-your-name", "master-your-name" will also point at your latest commit, C.
+    After "my-fork" is PR-ed into "master-your-name", "master-your-name" will point at a new commit C', that represents the squahsed version of all commits from the `scenario1` branch.
     
-    A---B---C master-your-name
+    A---B---C' master-your-name
     ```
     </details>
 
