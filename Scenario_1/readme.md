@@ -70,6 +70,7 @@ What is a feature branch?
     
 
     Remote "my-fork": 
+    
     A---B scenario1
     
 
