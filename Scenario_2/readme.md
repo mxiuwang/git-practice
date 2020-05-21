@@ -107,7 +107,7 @@ What is rebasing?
     A---B master-your-name
     ```
     </details>
-1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important. This simulates changes made by another engineer. 
+1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important.  Normally, one does not edit files in this fashion.  We are doing this to simulate changes made by another engineer.
 
     <details>
     <summary>Solution</summary>
@@ -236,5 +236,3 @@ Afterwards, the files in the Scenario_2 folder on in origin/master-your-name sho
     ```
     // Whatever "another engineer" added
     ```
-
-    
