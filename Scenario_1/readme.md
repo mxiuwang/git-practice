@@ -126,8 +126,7 @@ What is a feature branch?
     
     Update your local repo, and its pointers. 
     ``` console
-    $ git checkout master-your-name 
-    $ git pull
+    $ git pull origin master-your-name:master-your-name # pull from origin master-your-name to local master-your-name
     ```
 
     Check your [`commit logs`](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History), which contains all commits and merges by all authors in this project, in reverse-chronological order:
