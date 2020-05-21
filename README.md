@@ -41,7 +41,7 @@ Perform these instructions once before doing the exercises:
 1. Push `master-<your-name>` to `my-fork`
     ```console
     $ git push -u my-fork master-<your-name>
-    $ git branch master-<your-name> --set-upstream-to origin/master-michelle
+    $ git branch master-<your-name> --set-upstream-to origin/master-<your-name>
     ```
 1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice)
 
