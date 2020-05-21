@@ -124,8 +124,9 @@ What is a feature branch?
     <details>
     <summary>Solution</summary>
     
-    Update your local repo, and its pointers.
+    Update your local repo, and its pointers. 
     ``` console
+    $ git checkout master-your-name 
     $ git pull
     ```
 
