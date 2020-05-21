@@ -139,6 +139,7 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
+    After `my-fork` is PR-ed into `master-your-name`, `master-your-name` will point at a new commit C', that represents the squahsed version of all commits from the `scenario1` branch.
     ```
     Our local Repo: 
     
@@ -151,8 +152,6 @@ What is a feature branch?
 
 
     Remote "origin":
-
-    After "my-fork" is PR-ed into "master-your-name", "master-your-name" will point at a new commit C', that represents the squahsed version of all commits from the `scenario1` branch.
     
     A---B---C' master-your-name
     ```
