@@ -76,8 +76,6 @@ What is a feature branch?
 
     Remote "origin": 
     
-    no changes have been made to remote `origin`
-    
     A---B master-your-name
     ```
     </details>
