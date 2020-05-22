@@ -128,7 +128,7 @@ What is a feature branch?
     1. Click "New pull request" (beside "Branch: master-your-name"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
     1. Scroll down to see all the file change(s) you have made, and ensure they are correct. Ensure the "head repository" is your your fork, the "base repository" is Albertasaurus/git-practice, and that the compared and base branches are both `master-your-name`.
 
-        ![Git PR](img/PR.png)
+        ![Git PR](img/PR.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590103154632?sender=michellewang8970&key=5e30c6ac-84f7-4201-a7a7-0ba49ee9366a) -->
 
     1. Click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. Once all checks have passed, choose "Squash and merge" from the dropdown beside "Merge pull request", then "Confirm merge". 
 
@@ -150,6 +150,7 @@ What is a feature branch?
     # ensure origin/master-<your-name> is displayed
     $ git log origin/master-<your-name>
     ```
+    !["Final git log diagram"](img/s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590174462805?sender=michellewang8970&key=2685d92c-c30a-444f-9edf-7cdec22e5941) -->
     </details>
 
     <details>
