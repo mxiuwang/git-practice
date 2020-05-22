@@ -96,7 +96,7 @@ What is a feature branch?
     ```
 
     Try to match each pointer in the above commit logs to the commit diagrams below.
-    
+
     ```
     Our local Repo: 
     
@@ -116,6 +116,9 @@ What is a feature branch?
     
     A---B master-your-name
     ```
+
+    ![Git log diagram](img/gitDiagramLabelled.png)
+    <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590103154632/7b0d466ace2966b58c091eaf0aa2d6c663dedb5a) -->
     </details>
 1. Open a Pull Request (PR) on the Github website to merge your changes with origin. 
     <details>
