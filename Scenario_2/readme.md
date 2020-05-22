@@ -4,8 +4,8 @@ This exercise reflects the scenario when other Intuit engineers have made change
 
 You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the master branch, assuming there are no merge conflicts. 
 
-What is rebasing?
-[Rebase integrates changes from one branch to another](https://www.git-tower.com/learn/git/glossary/rebase), in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
+## What is rebasing?
+[Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
 
 # Instructions
 1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.

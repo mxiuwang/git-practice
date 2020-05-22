@@ -61,3 +61,33 @@ Diagram depicting the realtionship between `origin`, `my-fork`, and your local r
 <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1) -->
 * origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
 * my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice`
+
+# Conventions and Concepts 
+## Forking
+Our general workflow at Intuit includes forking off a copy of the original repository (`origin`) from Albertasaurus to our own account (`my-fork`). This is to ensure an additional check-and-balance before changes are introduced to production, and is also the most common way of making contributions to open-source projects. 
+
+## Local and Remote Repositories 
+A local repository is "folder" on your computer containing your code base, and only editable by you. A remote repository is your code base located on an online server (aka "remote"), that is accessible by your entire team.
+
+At Intuit and on projects where there are multiple contributors, each author creates a local responsitory cloned from the remote repository. When any author changes or adds new code from their local repo, they can `push`, or "send" them to the remote repo on Github.
+
+Click [here](https://www.intertech.com/Blog/introduction-to-git-concepts/) for more information.
+
+## Branching 
+A [git branch](https://www.atlassian.com/git/tutorials/using-branches) is a copy of your code base, based off of a specific commit you made in your `master` branch (or another branch). It represents an independent line of development (usually to develop a specific feature), where commits are independent from the master branch. It allows developers to work on seperate feature without interference, and to merge the code together later. 
+<details>
+<summary>Branching Diagram</summary>
+
+```
+     E feature1
+    /
+A---B---C---D master
+         \
+          F feature2 
+```
+</details>
+
+## Terminal, Command line, or Git GUIs?
+All instructions/solutions in this tutorial are Bash commands, available in Mac OS terminal. However, many of the same operations can be performed with different commands, on different operating systems, or with Git GUIs such as Tower or Sourcetree. 
+
+What's important is that you are able to use your tool of choice to verify that your commit log matches the commit diagrams provided in each quesiton.

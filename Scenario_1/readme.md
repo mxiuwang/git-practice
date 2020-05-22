@@ -2,9 +2,11 @@
 
 This exercise reflects the best-case scenario, where you (an engineer) pull code down from Git, make some changes in feature branch, and push them up to to Git, and merge with remote origin with no additional changes made by other engineers, and does not cause any merge conflicts. 
 
-What is a feature branch?
+## What is a feature branch?
 
-[A feature branch is simply a separate branch in your Git repo used to implement a single feature in your project.](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches)
+A [feature branch](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches) is simply a separate branch in your Git repo used to implement a single feature in your project.
+
+At Intuit, feature branches will be typically named after the JIRA ticket representing the feature or bug. For example in Payroll, a feature branch may be named `PD-123456` instead of `scenario1`.
 
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
@@ -19,9 +21,11 @@ What is a feature branch?
     <details>
     <summary>Commit Diagram</summary>
 
-    Below are the commit diagrams for your local repo, remote `my-fork`, and remote `origin`. `A` and `B` represent existing commits in this project, while `C` or later letters (in future diagrams) represent new changes a user introduces. 
+    Below are the commit diagrams for our `local repo`, remote `my-fork`, and remote `origin`. `A` and `B` represent existing commits in this project, while `C` or later letters (in future diagrams) represent new changes a user introduces. 
 
-    Currently, the local repo, `my-fork` and `origin` all point to the same commit (the existing content in the repo).
+    It is helpful to understand the concept of "remote" and "local" repos, as well as "branching". Further explanations can be found in the main `README.md`.
+
+    Currently, the `local repo`, `my-fork` and `origin` all point to the same commit (the existing content in the repo).
     ```
     Our local repo:
     
