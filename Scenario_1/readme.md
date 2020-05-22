@@ -142,12 +142,13 @@ What is a feature branch?
     Update your local repo, and its pointers. 
     ``` console
     $ git checkout master-<your-name>
-    $ git pull
+    $ git pull origin/master-<your-name> 
     ```
 
     Check your commit logs, and ensure they match the commit diagram.
     ```console
-    $ git log
+    # ensure origin/master-<your-name> is displayed
+    $ git log origin/master-<your-name>
     ```
     </details>
 
