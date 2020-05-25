@@ -36,8 +36,18 @@ You will learn how to rebase your changes on a feature branch on top of other en
     The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
 
     ```
-    Our local repo/remote my-fork/remote origin:
+    Our local repo
     
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+    A---B master-your-name
+    
+    
+    Remote origin:
+
     A---B master-your-name
     ```
     </details>
