@@ -1,7 +1,7 @@
 # About this Repo
 This is a repository is a Git practice package with exercises designed to help you develop your Git skills, in the way it is most commonly used at Intuit! This repo is intended for any Intuit employee learning Git for the first time, or engineers wishing to familiarize themselves with the Git workflow at Intuit. 
 
-The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario is contained within a folder, and within each folder is a readme.md detailling all the learning goals, instructions, and solutions to each exercise.
+The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario is contained within a folder, and within each folder is a `readme` detailling all the learning goals, instructions, and solutions to each exercise.
 
 # Setup
 Perform these instructions once before doing the exercises:
@@ -67,7 +67,7 @@ Diagram depicting the realtionship between `origin`, `my-fork`, and your local r
 Our general workflow at Intuit includes forking off a copy of the original repository (`origin`) from Albertasaurus to our own account (`my-fork`). This is to ensure an additional check-and-balance before changes are introduced to production, and is also the most common way of making contributions to open-source projects. 
 
 ## Local and Remote Repositories 
-A local repository is "folder" on your computer containing your code base, and only editable by you. A remote repository is your code base located on an online server (aka "remote"), that is accessible by your entire team.
+A local repository is "folder" on your computer containing your code base, and only editable by you. A remote repository is your code base located on an online server (aka "remote").
 
 At Intuit and on projects where there are multiple contributors, each author creates a local responsitory cloned from the remote repository. When any author changes or adds new code from their local repo, they can `push`, or "send" them to the remote repo on Github.
 

@@ -154,7 +154,6 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     # ensure origin/master-<your-name> is displayed
     $ git log origin/master-<your-name>
     ```
-    !["Final git log diagram"](img/s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590174462805?sender=michellewang8970&key=2685d92c-c30a-444f-9edf-7cdec22e5941) -->
     </details>
 
     <details>
@@ -176,6 +175,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     
     A---B---C' master-your-name
     ```
+    !["Final git log diagram"](img/s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590174462805?sender=michellewang8970&key=2685d92c-c30a-444f-9edf-7cdec22e5941) -->
     </details>
 1. Delete branch `scenario1` by going to the `Pull requests --> Closed`, selecting your most recent PR, and clicking `delete branch`. 
 
