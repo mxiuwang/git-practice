@@ -8,25 +8,17 @@ You will learn how to rebase your changes on a feature branch on top of other en
 [Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
 
 # Instructions
-1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.
+1. Reset local repo to `origin/master-your-name`, so we will start this scenario in a clean state. 
+
+    **Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
     <details>
     <summary>Instructions</summary>
 
-    Ensure all your changes are pushed to Github
     ```console
-    $ git stage -A
-    $ git commit -m "your message"
-    $ git push -u my-fork master 
-    ```
-
-    Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
-    ```console
-    $ git pull 
-    ```
-
-    Ensure that `(HEAD -> master-your-name)`, and `(origin/master-your-name, origin/HEAD)` are pointing to the latest commit, and `(my-fork/master)` contains the latest changes. 
-    ```console
-    $ git log
+    $ git clean -df
+    $ git checkout -- .
+    $ git fetch origin
+    $ git reset --hard origin/master-michlle
     ```
     </details>
 
@@ -102,8 +94,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-      D scenario2
-     /
+          D scenario2
+         /
     A---B master-your-name
     
 
@@ -122,7 +114,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    1. On the "Code" page of your `master-student-name` branch in origin, click "Create new file".
+    1. Navigate to [origin/scenario2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2) 
+    1. From the `branch` dropdown, choose `master-your-name`.
+    1. Click the "Create new file" button 
     1. Name your file `NewFile.txt` and add some text.
     1. Click "Commit changes" 
     </details>
@@ -133,8 +127,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-      D scenario2
-     /
+          D scenario2
+         /
     A---B master-your-name
     
 
@@ -145,8 +139,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote origin:
     
-      C another-engineer
-     /
+          C another-engineer
+         /
     A---B master-your-name
     ```
     </details>
@@ -162,7 +156,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
         ```
     1. Rebase your changes on top of the new changes made by another engineer in master-your-name
         ```console
-        $ git rebase master
+        $ git rebase master-your-name
         ```
     1. Check that your changes are on top of the changes imported from `master-your-name` with
         ```console
@@ -186,50 +180,70 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote origin:
     
-      C another-engineer
-     /
+          C another-engineer
+         /
     A---B master-your-name
     ```
     </details>
-1. Push changes to `my-fork`, and open a Pull Request (PR) to merge your changes with origin. 
+1. Push changes to `my-fork`
     <details>
     <summary>Solution</summary>
     
-    1. Push your changes to Github
-        ```console
-        $ git push
-        ```
-        <details>
-        <summary>Commit Diagram</summary>
+    Push your changes to Github
+    ```console
+    $ git push
+    ```
+    </details>
+    <details>
+    <summary>Commit Diagram</summary>
 
-        Our local repo:
-        ```
-        A---B---C---D master-your-name
-        
+    ```
+    Our local repo:
+    
+    A---B---C---D' master-your-name
+    
 
-        Remote my-fork:
-        
-        A---B---C---D master-your-name
-        
+    Remote my-fork:
 
-        Remote origin:
-        
+          C---D' scenario2
+         /
+    A---B master-your-name
+    
+
+    Remote origin:
+    
           C another-engineer
          /
-        A---B master-your-name
-        ```
-        </details>
-    1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
-        <details>
-        <summary>Commit Diagram</summary>
+    A---B master-your-name
+    ```
+1. Open a Pull Request (PR) to merge your changes with origin. 
+    <details>
+    <summary>Solution</summary>
 
-        ```
-        our local repo/remote my-fork/remote origin:
-        
-        A---B---C---D master-your-name
-        ```
-        </details>
-    1. If you run the `git log` command, `(HEAD -> master-your-name)` and `(origin/master-your-name, origin/HEAD)` should point to commit D, and `(my-fork/master)` should point to the last commit you pushed commit to `my-fork`.
+    1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+    1. Check that your commit (`D`) is on top of the other engineer's changes (`C`).
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+    
+    ```
+    our local repo:
+    
+    A---B---C---D' master-your-name
+
+
+    Remote my-fork:
+    
+          C---D' scenario2
+         /
+    A---B master-your-name
+
+    
+    Remote origin:
+
+    A---B---C---D' master-your-name
+    ```
     </details>
     
 # End Result

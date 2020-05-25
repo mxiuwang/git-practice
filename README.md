@@ -25,7 +25,7 @@ Perform these instructions once before doing the exercises:
 
     Add `my-fork` as a remote 
     ```console
-    $ git remote add my-fork
+    $ git remote add my-fork github.intuit.com/<your-name>/git-practice 
     ```
     This adds "my-fork" as an alias, pointing to the remote `github.intuit.com/<your-name>/git-practice`. 
 1. Create a new branch named `master-<your-name>` in your local repo by creating and checking out a new master branch
