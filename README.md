@@ -74,7 +74,7 @@ At Intuit and on projects where there are multiple contributors, each author cre
 Click [here](https://www.intertech.com/Blog/introduction-to-git-concepts/) for more information.
 
 ## Branching 
-A [git branch](https://www.atlassian.com/git/tutorials/using-branches) is a copy of your code base, based off of a specific commit you made in your `master` branch (or another branch). It represents an independent line of development (usually to develop a specific feature), where commits are independent from the master branch. It allows developers to work on seperate feature without interference, and to merge the code together later. 
+A [git branch](https://www.atlassian.com/git/tutorials/using-branches) is a pointer to a specific commit you made in your `master` branch (or another branch). It represents an independent line of development (usually to develop a specific feature), where commits are independent from the master branch. It allows developers to work on seperate feature without interference, and to merge the code together later. 
 <details>
 <summary>Branching Diagram</summary>
 

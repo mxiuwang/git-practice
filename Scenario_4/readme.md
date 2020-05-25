@@ -64,6 +64,24 @@ You will first attempt to rebase your changes made on feature branch on top of o
         Line 3A - Added by you
         Line 4A - Overriding changes made by another engineer
         ```
-    1. Commit and push the changes to `origin/scenario4` using the Github website. 
+    1. Commit and push the changes to `origin/scenario4` using the Github website. See previous scenario for more detailed instructions. 
+    </details>
+1. In the `scenario4` branch on your local repository, perform your SECOND set of changes on the `FileToModify.txt`. Commit these changes.
+    <details>
+    <summary>Solution</summary>
 
+    1. Open `FileToModify.txt` in the `Scenario_4` folder, and add in two lines so that your `FileToModify.txt` should look something like:
+        ```
+        Line 1
+        Line 2
+        Line 3A - Added by you
+        Line 3B - Also added by you
+        ```
+    1. Stage and commit, and push your changes to `my-fork`
+        ```console
+        $ git stage -A
+        $ git commit -m "added 2 lines"
+        $ git push -u my-fork scenario4
+        ```
+    1. Open a PR to merge your changes from `my-fork` to `origin`
     </details>
