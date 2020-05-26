@@ -20,12 +20,12 @@ Here is an example of how the commit diagram and commit logs can be matched:
 ```
 Our local repo:
 
-A---B master-your-name, scenario1
+A---B master-your-name
 
 
 Remote "my-fork":
 
-<nothing relevent to show>
+A---B master-your-name
 
 
 Remote "origin":
