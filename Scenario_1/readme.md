@@ -121,7 +121,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     A---B master-your-name
     ```
 
-    ![Git log diagram](img/gitDiagramLabelled.png)
+    ![Git log diagram](img/5_gitDiagram.png)
     <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590103154632/7b0d466ace2966b58c091eaf0aa2d6c663dedb5a) -->
     </details>
 1. Open a Pull Request (PR) on the Github website to merge your changes with origin. 
@@ -132,7 +132,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     1. Click "New pull request" (beside "Branch: master-your-name"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
     1. Scroll down to see all the file change(s) you have made, and ensure they are correct. Ensure the "head repository" is your your fork, the "base repository" is Albertasaurus/git-practice, and that the compared and base branches are both `master-your-name`.
 
-        ![Git PR](img/PR.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590103154632?sender=michellewang8970&key=5e30c6ac-84f7-4201-a7a7-0ba49ee9366a) -->
+        ![Git PR](img/6_PR.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590103154632?sender=michellewang8970&key=5e30c6ac-84f7-4201-a7a7-0ba49ee9366a) -->
 
     1. Click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. Once all checks have passed, choose "Squash and merge" from the dropdown beside "Merge pull request", then "Confirm merge". 
 
