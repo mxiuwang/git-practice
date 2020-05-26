@@ -41,6 +41,8 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     
     A---B master-your-name
     ```
+    ![git log diagram 1](img/1_initial.png)
+    <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590527283623/8aeb97f63a333034b7438edff848cda281bbf56c) -->
     </details>
 
 1. In the `scenario1` branch, modify FileToModify.txt using a text editor of your choice so that it looks like the End Result outlined below. 
@@ -82,6 +84,8 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     
     A---B master-your-name
     ```
+    ![git log diagram 4](img/4_labelled.png)
+    <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590528136485/f2454ae7cf47d3194fb4ecfee7cfcb939fe595f2) -->
     </details>
 1. Push changes from your current local `scenario1` branch to remote `my-fork`
     <details>
@@ -175,7 +179,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
     
     A---B---C' master-your-name
     ```
-    !["Final git log diagram"](img/s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1590174462805?sender=michellewang8970&key=2685d92c-c30a-444f-9edf-7cdec22e5941) -->
+    !["Final git log diagram"](img/7_s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590174462805/d8269296d9f97d5402299c2304a5fba7549a7a48) -->
     </details>
 1. Delete branch `scenario1` by going to the `Pull requests --> Closed`, selecting your most recent PR, and clicking `delete branch`. 
 
