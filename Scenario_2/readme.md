@@ -15,10 +15,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <summary>Instructions</summary>
 
     ```console
-    $ git clean -df
-    $ git checkout -- .
     $ git fetch origin
-    $ git reset --hard origin/master-michlle
+    $ git reset --hard origin/master-michelle
     ```
     </details>
 

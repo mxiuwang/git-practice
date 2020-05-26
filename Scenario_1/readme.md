@@ -34,7 +34,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
 
     Remote "my-fork":
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote "origin":
@@ -75,7 +75,7 @@ At Intuit, feature branches will be typically named after the JIRA ticket repres
 
     Remote "my-fork": 
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote "origin": 
