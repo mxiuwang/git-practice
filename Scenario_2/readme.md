@@ -2,10 +2,10 @@
 
 This exercise reflects the scenario when other Intuit engineers have made changes to master, and you must rebase your changes on top of theirs.
 
-You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the master branch, assuming there are no merge conflicts. 
+You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the `master-your-name` branch, assuming there are no merge conflicts. 
 
 ## What is rebasing?
-[Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-student-name` branch to your feature branch. 
+[Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
 
 # Instructions
 1. Reset local repo to `origin/master-your-name`, so we will start this scenario in a clean state. 
@@ -35,7 +35,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
 
-    A---B master-your-name
+    <nothing relevent to show>
     
     
     Remote origin:
@@ -63,7 +63,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
@@ -101,7 +101,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
@@ -109,7 +109,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. Go onto Github, open `master-student-name` branch in origin, go to `Scenario_2`, and create a new file called `NewFile.txt`. What is in this file is not important.  Normally, one does not edit files in this fashion.  We are doing this to simulate changes made by another engineer.
+1. In this step, we are going to act like another engineer making changes to the repo on `master-your-name`.  We'll do this by editing a file directly from the github website.  Note: Normally, one does not edit files in this fashion; it is done here to easily simulate someone else making a change.
 
     <details>
     <summary>Solution</summary>
@@ -117,13 +117,14 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Navigate to [origin/scenario2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2) 
     1. From the `branch` dropdown, choose `master-your-name`.
     1. Click the "Create new file" button 
-    1. Name your file `NewFile.txt` and add some text.
-    1. Click "Commit changes" 
+    1. Name your file `NewFile.txt` and add some text (doesn't matter what).
+    1. Click "Commit changes"
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
-
+   
+    The commit that contains the other engineer's changes will be represented in `C` in the following diagrams.
     ```
     Our local repo:
     
@@ -134,11 +135,11 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
-    
+
           C another-engineer
          /
     A---B master-your-name
@@ -158,15 +159,12 @@ You will learn how to rebase your changes on a feature branch on top of other en
         ```console
         $ git rebase master-your-name
         ```
-    1. Check that your changes are on top of the changes imported from `master-your-name` with
-        ```console
-        $ git log
-        ```
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
+    Observe that your commit, `D` is stacked on top of `C`
     ```
     Our local repo:
     
@@ -175,7 +173,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
@@ -200,14 +198,12 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-    A---B---C---D' master-your-name
+    A---B---C---D master-your-name
     
 
     Remote my-fork:
 
-          C---D' scenario2
-         /
-    A---B master-your-name
+    A---B---C---D scenario2
     
 
     Remote origin:
@@ -235,10 +231,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote my-fork:
     
-          C---D' scenario2
-         /
-    A---B master-your-name
-
+    A---B---C---D scenario2
+    
     
     Remote origin:
 
