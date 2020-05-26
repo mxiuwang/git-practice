@@ -8,6 +8,31 @@ A [feature branch](https://bocoup.com/blog/git-workflow-walkthrough-feature-bran
 
 At Intuit, feature branches will be typically named after the JIRA ticket representing the feature or bug. For example in Payroll, a feature branch may be named `PD-123456` instead of `scenario1`.
 
+## Commit Diagrams
+The commit diagrams included in each step of the instructions should match the commit log which can be accessed in terminal with the command:
+```console
+$ git log
+```
+This command should be used after each step, to check that the pointer to every branch in the `local`, `my-fork`, and `origin` repositories match the pointers illustrated in the commit diagram. 
+
+Here is an example of how the commit diagram and commit logs can be matched: 
+
+```
+Our local repo:
+
+A---B master-your-name, scenario1
+
+
+Remote "my-fork":
+
+<nothing relevent to show>
+
+
+Remote "origin":
+
+A---B master-your-name
+```
+
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
     <details>

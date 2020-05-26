@@ -16,7 +16,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     ```console
     $ git fetch origin
-    $ git reset --hard origin/master-michelle
+    $ git reset --hard origin/master-your-name
     ```
     </details>
 
