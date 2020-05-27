@@ -17,21 +17,8 @@ This command should be used after each step, to check that the pointer to every 
 
 Here is an example of how the commit diagram and commit logs can be matched: 
 
-```
-Our local repo:
-
-A---B master-your-name
-
-
-Remote "my-fork":
-
-A---B master-your-name
-
-
-Remote "origin":
-
-A---B master-your-name
-```
+![git log diagram initial](img/0_labelled.png)
+    <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590527283623/8aeb97f63a333034b7438edff848cda281bbf56c) -->
 
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
