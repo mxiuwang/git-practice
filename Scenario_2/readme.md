@@ -107,7 +107,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. In this step, we are going to act like another engineer making changes to the repo on `master-your-name`.  We'll do this by editing a file directly from the github website.  Note: Normally, one does not edit files in this fashion; it is done here to easily simulate someone else making a change.
+1. In this step, we are going to act like another engineer making changes to the repo on `master-your-name`.  We'll do this by editing a file directly from the github website.  
+
+    **Note:** Normally, one does not edit files in this fashion; it is done here to easily simulate someone else making a change.
 
     <details>
     <summary>Solution</summary>
@@ -115,7 +117,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Navigate to [origin/scenario2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2) 
     1. From the `branch` dropdown, choose `master-your-name`.
     1. Click the "Create new file" button 
+    ![create new file](img/s2.4_newFile.png)
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
+    ![create new file](img/s2.4_newFileName.png)
     1. Click "Commit changes"
     </details>
 
