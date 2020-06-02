@@ -8,7 +8,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 [Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
 
 # Instructions
-1. Reset local repo to `origin/master-your-name`, so we will start this scenario in a clean state. 
+1. From your `master-your-name` branch, reset local repo to `origin/master-your-name`, so we will start this scenario in a clean state. 
 
     **Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
     <details>
@@ -69,7 +69,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. Perform your changes on the `scenario2` branch, specifically on the  `FileToModify.txt` in the `Scenario_2` folder. 
+1. Perform your changes on the `scenario2` branch, specifically on the  `FileToModify.txt` in the `Scenario_2` folder. Stage and commit your changes. 
     <details>
     <summary>Solution</summary>
     
@@ -82,7 +82,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Stage and commit your changes 
         ```console
         $ git stage -A
-        $ git commit -m "your message"
+        $ git commit -m "Added a new line"
         ```
     </details>
 
@@ -121,12 +121,19 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
     ![create new file](img/s2.4_newFileName.png)
     1. Click "Commit changes"
+    1. On your local repo, run 
+        ```console
+        $ git fetch origin
+        ```
+        to refresh your pointers
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
    
     The commit that contains the other engineer's changes will be represented in `C` in the following diagrams.
+    
+    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. Alternatively, this may be visualized more earily in a Git GUI such as Tower or Sourcetree. 
     ```
     Our local repo:
     
@@ -154,7 +161,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Update `master-your-name` with the latest changes from Git
         ```console
         $ git checkout master-your-name
-        $ git pull
+        $ git pull origin master-your-name 
         $ git checkout scenario2
         ```
     1. Rebase your changes on top of the new changes made by another engineer in master-your-name
@@ -169,8 +176,10 @@ You will learn how to rebase your changes on a feature branch on top of other en
     Observe that your commit, `D` is stacked on top of `C`
     ```
     Our local repo:
-    
-    A---B---C---D master-your-name
+
+              D scenario 2
+             /
+    A---B---C another engineer 
     
 
     Remote my-fork:
@@ -191,7 +200,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     
     Push your changes to Github
     ```console
-    $ git push
+    $ git push -u my-fork scenario2 
     ```
     </details>
     <details>
@@ -199,13 +208,17 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     ```
     Our local repo:
-    
-    A---B---C---D master-your-name
+
+              D scenario 2
+             /
+    A---B---C another engineer 
     
 
     Remote my-fork:
 
-    A---B---C---D scenario2
+              D scenario 2
+             /
+    A---B---C another engineer 
     
 
     Remote origin:
@@ -218,7 +231,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
     1. Check that your commit (`D`) is on top of the other engineer's changes (`C`).
     </details>
 
