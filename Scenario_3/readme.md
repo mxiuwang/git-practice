@@ -8,36 +8,36 @@ What is a merge conflict?
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # Instructions 
-1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.
+1. Check out your `master-your-name` locally, and update/reset your repo so that your local repo and `origin` are pointing the the same commit.
+
+    **Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
     <details>
     <summary>Instructions</summary>
 
-    Ensure all your changes are pushed to Github
     ```console
-    $ git stage -A
-    $ git commit -m "your message"
-    $ git push -u my-fork master 
-    ```
-
-    Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
-    ```console
-    $ git pull 
-    ```
-
-    Ensure that `(HEAD -> master-your-name)`, and `(origin/master-your-name, origin/HEAD)` are pointing to the latest commit, and `(my-fork/master)` contains the latest changes. 
-    ```console
-    $ git log
+    $ git fetch origin
+    $ git reset --hard origin/master-your-name
     ```
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
-    The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
+    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
 
     ```
-    Our local repo/remote my-fork/remote origin:
+    Our local repo:
     
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+    <nothing relevent to show>
+    
+    
+    Remote origin:
+
     A---B master-your-name
     ```
     </details>
@@ -57,12 +57,12 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
     
-    A---B master-your-name, scenario2
+    A---B master-your-name, scenario3
 
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
@@ -92,14 +92,14 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
     
-      D scenario2
+      D scenario3
      /
     A---B master-your-name
     
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
@@ -111,35 +111,42 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <details>
     <summary>Solution</summary>
 
-    1. On Github, open `FileToModify.txt` in the `Scenario_3` folder, and add in the line `Line 3A - Added by another engineer` so that it looks like:
+    1. On Github, open `FileToModify.txt` in the `Scenario_3` folder, and changing the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that it looks like:
         ```
         Line 1
         Line 2
-        Line 3B - Added by another engineer
+        Line 3A - Added by another engineer
         ```
     1. Commit and push your changes on Github
+    1. Refresh your local repo's pointers with the command
+        ```console
+        $ git fetch origin
+        ```
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
+    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. 
+    
+    Alternatively, this may be visualized more easily in a Git GUI such as Tower or Sourcetree. Be sure to `fetch` your changes.
     ```
     Our local repo:
     
-      D scenario2
-     /
+         D scenario2
+        /
     A---B master-your-name
     
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
     
-      C another-engineer
-     /
+          C another-engineer
+         /
     A---B master-your-name
     ```
     </details>

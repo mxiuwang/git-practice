@@ -23,10 +23,10 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Commit Diagram</summary>
 
-    The local repo, `my-fork` and `origin` all point to the the existing content in the repo.
+    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
 
     ```
-    Our local repo
+    Our local repo:
     
     A---B master-your-name
 
@@ -121,11 +121,10 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
     ![create new file](img/s2.4_newFileName.png)
     1. Click "Commit changes"
-    1. On your local repo, run 
+    1. Refresh your local repo's pointers with the command
         ```console
         $ git fetch origin
         ```
-        to refresh your pointers
     </details>
 
     <details>
@@ -133,7 +132,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
    
     The commit that contains the other engineer's changes will be represented in `C` in the following diagrams.
     
-    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. Alternatively, this may be visualized more earily in a Git GUI such as Tower or Sourcetree. 
+    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. 
+    
+    Alternatively, this may be visualized more easily in a Git GUI such as Tower or Sourcetree. Be sure to `fetch` your changes.
     ```
     Our local repo:
     
