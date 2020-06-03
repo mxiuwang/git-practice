@@ -62,6 +62,28 @@ Diagram depicting the realtionship between `origin`, `my-fork`, and your local r
 * origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
 * my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice`
 
+# Cleaning 
+At the beginning of each scenario, please reset your local repo so we start from a "clean state" each time. 
+
+**Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
+
+1. Check out your local `master-<your-name>` branch
+    ```console
+    $ git checkout master-your-name
+    ```
+1. Delete any unstaged files and directories 
+    ```console
+    $ git clean -f -d 
+    ```
+1. Refresh pointers and references from your remote `origin` repository 
+    ```console
+    $ git fetch origin
+    ```
+1. Reset your local `master-<your-name>` branch to the same state as the `master-<your-name>` branch in `origin`.
+    ```console
+    $ git reset --hard origin/master-your-name
+    ```
+
 # Conventions and Concepts 
 ## Forking
 Our general workflow at Intuit includes forking off a copy of the original repository (`origin`) from Albertasaurus to our own account (`my-fork`). This is to ensure an additional check-and-balance before changes are introduced to production, and is also the most common way of making contributions to open-source projects. 

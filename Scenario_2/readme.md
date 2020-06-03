@@ -8,16 +8,13 @@ You will learn how to rebase your changes on a feature branch on top of other en
 [Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
 
 # Instructions
-1. From your `master-your-name` branch, reset local repo to `origin/master-your-name`, so we will start this scenario in a clean state. 
+1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
 
     **Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
     <details>
     <summary>Instructions</summary>
 
-    ```console
-    $ git fetch origin
-    $ git reset --hard origin/master-your-name
-    ```
+    See the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning)
     </details>
 
     <details>

@@ -8,16 +8,11 @@ What is a merge conflict?
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # Instructions 
-1. Check out your `master-your-name` locally, and update/reset your repo so that your local repo and `origin` are pointing the the same commit.
-
-    **Warning**: This is a destructive operation that will reset any work in progress. Please ensure you are ready to move on from the previous exercise. 
+1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
     <details>
     <summary>Instructions</summary>
 
-    ```console
-    $ git fetch origin
-    $ git reset --hard origin/master-your-name
-    ```
+    See the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning)
     </details>
 
     <details>
