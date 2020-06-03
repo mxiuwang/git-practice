@@ -92,8 +92,8 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
     
-      D scenario3
-     /
+          D scenario3
+         /
     A---B master-your-name
     
 
@@ -133,8 +133,8 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
     
-         D scenario2
-        /
+          D scenario3
+         /
     A---B master-your-name
     
 
@@ -157,12 +157,12 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     1. Update your local `master-your-name` branch with the latest changes from Git
         ```console
         $ git checkout master-your-name
-        $ git pull
+        $ git pull origin master-your-name 
         $ git checkout scenario3
         ```
     1. Try to rebase your changes on top of the new changes made by another engineer in master-your-name. A merge conflict should appear.
         ```console
-        $ git rebase master
+        $ git rebase master-your-name
         ```
     1. Resolve the merge conflict.
         First, go to the file where the merge conflict is occuring. You should see something like this:
@@ -202,19 +202,21 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 
     ```
     Our local repo:
-    
-    A---B---C---D master-your-name
+
+              D scenario3
+             /
+    A---B---C another engineer 
     
 
     Remote my-fork:
     
-    A---B master-your-name
+    <nothing relevent to show>
     
 
     Remote origin:
     
-      C another-engineer
-     /
+          C another-engineer
+         /
     A---B master-your-name
     ```
     </details>
@@ -230,33 +232,44 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         <details>
         <summary>Commit Diagram</summary>
 
-        Our local repo:
         ```
-        A---B---C---D master-your-name
+        Our local repo:
+        
+        A---B---C---D scenario3
         
 
         Remote my-fork:
         
-        A---B---C---D master-your-name
+        A---B---C---D scenario3
         
 
         Remote origin:
         
-          C another-engineer
-         /
+              C another-engineer
+             /
         A---B master-your-name
         ```
         </details>
-    1. Open a Pull Request on Githunb to merge changes from `my-fork` to `master-your-name` branch in origin. 
+    1. Open a Pull Request on Githunb to merge changes from `scenario3` in `my-fork` to `master-your-name` branch in `origin`. 
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
     ```
-    Our local repo/remote my-fork/remote origin:
+    Our local repo:
+        
+    A---B---C---D scenario3
     
-    A---B---C---D master-your-name
+
+    Remote my-fork:
+    
+    A---B---C---D' scenario3
+    
+
+    Remote origin:
+    
+    A---B---C---D' scenario3
     ```
     </details>
     

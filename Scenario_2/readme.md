@@ -242,12 +242,12 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     our local repo:
     
-    A---B---C---D' master-your-name
+    A---B---C---D master-your-name
 
 
     Remote my-fork:
     
-    A---B---C---D scenario2
+    A---B---C---D' scenario2
     
     
     Remote origin:
