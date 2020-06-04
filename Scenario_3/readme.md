@@ -106,25 +106,32 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <details>
     <summary>Solution</summary>
 
-    1. On Github, open `FileToModify.txt` in the `Scenario_3` folder, and changing the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that it looks like:
+    1. Navigate to [origin/scenario3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3) 
+    1. From the `branch` dropdown, choose `master-your-name`.
+    1. Open `FileToModify.txt` in the `Scenario_3` folder, and changing the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that it looks like:
         ```
         Line 1
         Line 2
         Line 3A - Added by another engineer
         ```
-    1. Commit and push your changes on Github
-    1. Refresh your local repo's pointers with the command
-        ```console
-        $ git fetch origin
-        ```
+    1. Click "Commit changes"
+    </details>
+
+1. Fetch the latest references from Github
+    <details>
+    <summary>Solution</summary>
+
+    Refresh your local repo's pointers with the command
+    ```console
+    $ git fetch origin
+    ```
+    More details about `git fetch` can be found in Step 5 of [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions)
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
-
-    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. 
     
-    Alternatively, this may be visualized more easily in a Git GUI such as Tower or Sourcetree. Be sure to `fetch` your changes.
+    Be sure to `fetch` your changes, or use a Git GUI such as Tower or Sourcetree to visualize the commit diagram more easily.
     ```
     Our local repo:
     
@@ -198,7 +205,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
 
-              D scenario3
+              D' scenario3
              /
     A---B---C another engineer 
     
@@ -216,58 +223,67 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     </details>
     
-1. Merge changes with the `master-your-name` branch, push them to `my-fork`, and open a PR to merge your changes with origin. 
+1. Push changes to `my-fork/scenario3`
     <details>
     <summary>Solution</summary>
     
-    1. Push your changes to Github
-        ```console
-        $ git push -u my-fork scenario3
-        ```
-        <details>
-        <summary>Commit Diagram</summary>
-
-        ```
-        Our local repo:
-        
-        A---B---C---D scenario3
-        
-
-        Remote my-fork:
-        
-        A---B---C---D scenario3
-        
-
-        Remote origin:
-        
-              C another-engineer
-             /
-        A---B master-your-name
-        ```
-        </details>
-    1. Open a Pull Request on Githunb to merge changes from `scenario3` in `my-fork` to `master-your-name` branch in `origin`. 
-    </details>
-
+    Push your changes to Github
+    ```console
+    $ git push -u my-fork scenario3
+    ```
     <details>
     <summary>Commit Diagram</summary>
 
     ```
     Our local repo:
-        
-    A---B---C---D scenario3
+
+              D' scenario3
+             /
+    A---B---C another engineer 
     
 
     Remote my-fork:
     
-    A---B---C---D' scenario3
+              D' scenario3
+             /
+    A---B---C another engineer 
     
 
     Remote origin:
     
-    A---B---C---D' scenario3
+             C another-engineer
+            /
+    A---B master-your-name
     ```
     </details>
+1. Open a Pull Request (PR) on Github to merge changes from `scenario3` in `my-fork` to `origin/master-<your-name>`.
+    <details>
+    <summary>Solution</summary>
+
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
+    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    For more details on the notation and interpretation of these commit diagrams, please refer to Step 8 in [scenario 2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions).
+    ```
+    Our local repo:
+        
+    A---B---C---D' scenario3
     
+
+    Remote my-fork:
+    
+    A---B---C---D'' scenario3
+    
+
+    Remote origin:
+    
+    A---B---C---D'' scenario3
+    ```
+    </details>
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in origin/master:

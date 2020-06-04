@@ -121,10 +121,6 @@ You will learn how to rebase your changes on a feature branch on top of other en
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
     ![create new file](img/s2.4_newFileName.png)
     1. Click "Commit changes"
-    1. Refresh your local repo's pointers with the command
-        ```console
-        $ git fetch origin
-        ```
     </details>
 
 1. Fetch the latest references from Github
@@ -139,6 +135,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     It is a good practice to run `git fetch` frequently, to ensure that we are always working with the latest code. 
     </details>
+
     <details>
     <summary>Commit Diagram</summary>
    
@@ -207,7 +204,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. Push changes to `my-fork`
+1. Push changes to `my-fork/scenario2`
     <details>
     <summary>Solution</summary>
     
@@ -216,20 +213,21 @@ You will learn how to rebase your changes on a feature branch on top of other en
     $ git push -u my-fork scenario2 
     ```
     </details>
+
     <details>
     <summary>Commit Diagram</summary>
 
     ```
     Our local repo:
 
-              D' scenario 2
+              D' scenario2
              /
     A---B---C another engineer 
     
 
     Remote my-fork:
 
-              D' scenario 2
+              D' scenario2
              /
     A---B---C another engineer 
     
@@ -240,7 +238,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
          /
     A---B master-your-name
     ```
-1. Open a Pull Request (PR) to merge your changes with origin. 
+    </details>
+1. Open a Pull Request (PR) to merge your changes with `origin/master-<your-name>`. 
     <details>
     <summary>Solution</summary>
 
