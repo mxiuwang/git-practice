@@ -10,9 +10,9 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 # Instructions 
 1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
     <details>
-    <summary>Instructions</summary>
+    <summary>Solution</summary>
 
-    See the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning)
+    Check `git status`, and see the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning) if there are any uncommitted changes.
     </details>
 
     <details>
