@@ -102,13 +102,13 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     A---B master-your-name
     ```
     </details>
-1. Simulate changes made by another engineering by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file.
+1. Simulate changes made by another engineering to `master` by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file on the `master-your-name` branch in `origin`.
     <details>
     <summary>Solution</summary>
 
-    1. Navigate to [origin/scenario3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3) 
+    1. Navigate to the [Scenario_3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3) folder in `origin`. 
     1. From the `branch` dropdown, choose `master-your-name`.
-    1. Open `FileToModify.txt` in the `Scenario_3` folder, and changing the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that it looks like:
+    1. Open `FileToModify.txt`, and change the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that the file looks like:
         ```
         Line 1
         Line 2
@@ -152,7 +152,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     A---B master-your-name
     ```
     </details>
-1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`. Resolve any merge conflicts. 
+1. Rebase your changes on top of the new changes pulled from the remote `master-your-name` branch in the `origin` repo. Resolve any merge conflicts. 
     <details>
     <summary>Solution</summary>
 
@@ -286,7 +286,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     </details>
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in origin/master:
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
 ```
 Line 1
 Line 2
