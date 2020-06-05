@@ -93,7 +93,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
     <details>
     <summary>Solution</summary>
 
-    1. Go to the `origin` repo on Github, navigate to the `scenario4` branch, and open `FileToModify.txt` in the `Scenario_4` folder (the one you just PR-ed into this repo). 
+    1. Go to the [origin](https://github.intuit.com/Albertasaurus/git-practice/tree/master) repo on Github, choose the `scenario4` branch from the "Branch" dropdown, and open `FileToModify.txt` in the `Scenario_4` folder (the one you just PR-ed into this repo). 
     1. Add another line to `FileToModify.txt` so that your file now looks like:
         ```
         Line 1
@@ -147,13 +147,68 @@ You will first attempt to rebase your changes made on feature branch on top of o
     </details>
 
 1. Rebase your changes on top of the new changes pulled from the remote `scenario4` branch in the `origin` repo. Resolve any merge conflicts. 
-    1. Try to rebase `git rebase origin/scenario4` (this scenario4 is the remote) 
-    2. Resolve merge conflicts 
-    3. Git add -A
-    4. Git rebase —continue 
-    5. Git log (your commit should be on top of another engineer’s) 
-6. Git push -u my-fork scenario4
-7. Open PR to merge my-fork/scenario4 to origin/master-your-name 
+    <details>
+    <summary>Solution</summary>
+
+    1. Try to rebase your changes on top of the new changes made by another engineer in `scenario4`. A merge conflict should appear.
+        ```console
+        $ git rebase origin/scenario4
+        ```
+    1. Resolve the merge conflict(s)
+        
+        For more details on how this is done, refer to Step 6 in [Scneario 3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3/#Instructions).
+
+        Your final FileToModify.txt should look like this:
+        ```
+        Line 1
+        Line 2
+        Line 3 - Added by you
+        Line 4A - Additions by another engineer
+        Line 4B - Also added by you
+        ```
+    1. Add your changes, and continue the rebase.
+        ```console
+        $ git add -A 
+        $ git rebase --continue
+        ```
+    1. Check your rebased changes are in the expected order
+        ```console
+        $ git log
+        ```
+        Your second commit should be on top, followed by the other engineers', followed by your first commit. 
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+1. Push changes to `my-fork/scenario4`
+    <details>
+    <summary>Solution</summary>
+    
+    ```console
+    $ git push -u my-fork scenario4
+    ```
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+1. Open a Pull Request (PR) on Github to merge changes from `scenario4` in `my-fork` to `origin/master-<your-name>`.
+    <details>
+    <summary>Solution</summary>
+
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
+    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
@@ -161,6 +216,6 @@ Afterwards, `FileToModify.txt` should look like the following in `origin/master-
 Line 1
 Line 2
 Line 3 - Added by you
-Line 4A = Additions by another engineer
-Line 3B - Also added by you
+Line 4A - Additions by another engineer
+Line 4B - Also added by you
 ```

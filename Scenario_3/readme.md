@@ -162,7 +162,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
         $ git pull origin master-your-name 
         $ git checkout scenario3
         ```
-    1. Try to rebase your changes on top of the new changes made by another engineer in master-your-name. A merge conflict should appear.
+    1. Try to rebase your changes on top of the new changes made by another engineer in `master-your-name`. A merge conflict should appear.
         ```console
         $ git rebase master-your-name
         ```
@@ -181,7 +181,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 
         In this case, we want to keep both lines 3A and 3B. So we simply drag line 3B in between `<<<<<<< HEAD` and `=======`, make sure there's no other merge conflicts, and delete the merge conflict markers `<<<<<<< HEAD`, `=======`, and `>>>>>>> Line 3B Added by you merge conflict`.
 
-        Your final result, after you've resolved the merge conflicts, should look like this:
+        Your final FileToModify.txt, after you've resolved the merge conflicts, should look like this:
         ```
         Line 1
         Line 2
