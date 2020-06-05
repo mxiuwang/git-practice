@@ -5,25 +5,32 @@ This exercise reflects the scenario when you rebase your changes on top of chang
 You will first attempt to rebase your changes made on feature branch on top of other engineers' changes in the same branch, and manually resolve any merge conflicts. Then, push the feature branch to remote. 
 
 # Instructions
-1. Check out`master-your-name` branch in `my-fork`, and update your repo so that your local machine, `origin`, and `my-fork` are all pointing the the latest commit.
+1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
     <details>
-    <summary>Instructions</summary>
+    <summary>Solution</summary>
 
-    Ensure all your changes are pushed to Github
-    ```console
-    $ git stage -A
-    $ git commit -m "your message"
-    $ git push -u my-fork master 
+    Check `git status`, and see the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning) if there are any uncommitted changes.
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
+
     ```
+    Our local repo:
+    
+    A---B master-your-name
 
-    Ensure your local machine contains all changes, and pointers are pointing to the latest commit 
-    ```console
-    $ git pull 
-    ```
 
-    Ensure that `(HEAD -> master-your-name)`, and `(origin/master-your-name, origin/HEAD)` are pointing to the latest commit, and `(my-fork/master)` contains the latest changes. 
-    ```console
-    $ git log
+    Remote my-fork:
+
+    <nothing relevent to show>
+    
+    
+    Remote origin:
+
+    A---B master-your-name
     ```
     </details>
 1. Create a feature branch on your local machine called `scenario4`
@@ -34,17 +41,41 @@ You will first attempt to rebase your changes made on feature branch on top of o
     $ git checkout -b scenario3
     ```
     </details>
-1. Perform your FIRST set of changes on the `scenario4` branch, specifically on the `FileToModify.txt` in the `Scenario_4` folder on your local machine. Stage, commit, push, and PR your changes to remote `origin/master-your-name`.
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+    
+    A---B master-your-name, scenario3
+
+
+    Remote my-fork:
+    
+    <nothing relevent to show>
+    
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
+    </details>
+1. Perform your FIRST set of changes on the `scenario4` branch, specifically on the `FileToModify.txt` on your local machine.
     <details>
     <summary>Solution</summary>
 
-    1. Open `FileToModify.txt` in the `Scenario_4` folder, and add in two lines so that your `FileToModify.txt` should look something like:
-        ```
-        Line 1
-        Line 2
-        Line 3A - Added by you
-        Line 3B - Also added by you
-        ```
+    Open `FileToModify.txt` in the `Scenario_4` folder, and add in a line so that your `FileToModify.txt` should look something like:
+    ```
+    Line 1
+    Line 2
+    Line 3A - Added by you
+    ```
+    </details>
+1. Stage, commit, push, and PR your changes from your local machine to `origin`, so that your changes are available to "all developers". 
+    <details>
+    <summary>Solution</summary>
+
     1. Stage and commit, and push your changes to `my-fork`
         ```console
         $ git stage -A
@@ -53,35 +84,138 @@ You will first attempt to rebase your changes made on feature branch on top of o
         ```
     1. Open a PR to merge your changes from `my-fork` to `origin`
     </details>
-1. Simulate changes made by another engineer by going to Github, opening the `FileToModify.txt` file in `origin/scenario4` with the new changes you pushed, and modifying one of the lines you added. Commit and push these changes. 
-    <details>
-    <summary>Solution</summary>
 
-    1. Open `FileToModify.txt` in `origin/scenario4`, and change one of the lines you just added so that your `FileToModify.txt` now looks something like:
-        ```
-        Line 1
-        Line 2
-        Line 3A - Added by you
-        Line 4A - Overriding changes made by another engineer
-        ```
-    1. Commit and push the changes to `origin/scenario4` using the Github website. See previous scenario for more detailed instructions. 
+    <details>
+    <summary>Commit Diagram</summary>
+
     </details>
-1. In the `scenario4` branch on your local repository, perform your SECOND set of changes on the `FileToModify.txt`. Commit these changes.
+1. Simulate changes made by another engineer **on your feature branch** (the one you just made available to all developers).
     <details>
     <summary>Solution</summary>
 
-    1. Open `FileToModify.txt` in the `Scenario_4` folder, and add in two lines so that your `FileToModify.txt` should look something like:
+    1. Go to the [origin](https://github.intuit.com/Albertasaurus/git-practice/tree/master) repo on Github, choose the `scenario4` branch from the "Branch" dropdown, and open `FileToModify.txt` in the `Scenario_4` folder (the one you just PR-ed into this repo). 
+    1. Add another line to `FileToModify.txt` so that your file now looks like:
         ```
         Line 1
         Line 2
-        Line 3A - Added by you
-        Line 3B - Also added by you
+        Line 3 - Added by you 
+        Line 4A - Additions by another engineer
         ```
-    1. Stage and commit, and push your changes to `my-fork`
+    1. 1. Click "Commit changes"
+    </details>
+
+1. Fetch the latest references from Github
+    <details>
+    <summary>Solution</summary>
+
+    Refresh your local repo's pointers with the command
+    ```console
+    $ git fetch origin
+    ```
+    More details about `git fetch` can be found in Step 5 of [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions)
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+    
+    </details>
+
+1. In the `scenario4` branch on your local repository, perform and commit your SECOND set of changes on the `FileToModify.txt`. 
+
+    This simulates your ongoing work, despite your colleague making changes to your code elsewhere. 
+
+    <details>
+    <summary>Solution</summary>
+
+    1. On your local machine, open `FileToModify.txt` in the `Scenario_4` folder of your `scenario4` branch, and add in a line so that your `FileToModify.txt` should look something like:
+        ```
+        Line 1
+        Line 2
+        Line 3 - Added by you 
+        Line 4B - Also added by you 
+        ```
+    1. Stage and commit your changes
         ```console
         $ git stage -A
-        $ git commit -m "added 2 lines"
-        $ git push -u my-fork scenario4
+        $ git commit -m "added a line to scenario 4"
         ```
-    1. Open a PR to merge your changes from `my-fork` to `origin`
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+1. Rebase your changes on top of the new changes pulled from the remote `scenario4` branch in the `origin` repo. Resolve any merge conflicts. 
+    <details>
+    <summary>Solution</summary>
+
+    1. Try to rebase your changes on top of the new changes made by another engineer in `scenario4`. A merge conflict should appear.
+        ```console
+        $ git rebase origin/scenario4
+        ```
+    1. Resolve the merge conflict(s)
+        
+        For more details on how this is done, refer to Step 6 in [Scneario 3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3/#Instructions).
+
+        Your final FileToModify.txt should look like this:
+        ```
+        Line 1
+        Line 2
+        Line 3 - Added by you
+        Line 4A - Additions by another engineer
+        Line 4B - Also added by you
+        ```
+    1. Add your changes, and continue the rebase.
+        ```console
+        $ git add -A 
+        $ git rebase --continue
+        ```
+    1. Check your rebased changes are in the expected order
+        ```console
+        $ git log
+        ```
+        Your second commit should be on top, followed by the other engineers', followed by your first commit. 
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+1. Push changes to `my-fork/scenario4`
+    <details>
+    <summary>Solution</summary>
+    
+    ```console
+    $ git push -u my-fork scenario4
+    ```
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+1. Open a Pull Request (PR) on Github to merge changes from `scenario4` in `my-fork` to `origin/master-<your-name>`.
+    <details>
+    <summary>Solution</summary>
+
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
+    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    </details>
+
+# End Result
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
+```
+Line 1
+Line 2
+Line 3 - Added by you
+Line 4A - Additions by another engineer
+Line 4B - Also added by you
+```

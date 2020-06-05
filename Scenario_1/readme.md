@@ -203,7 +203,7 @@ $ git log scenario1 master-your-name origin/master-your-name
 1. Delete branch `scenario1` by going to the `Pull requests --> Closed`, selecting your most recent PR, and clicking `delete branch`. 
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in both origin/master-your-name:
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
 ```
 Line 1 
 Line 2
