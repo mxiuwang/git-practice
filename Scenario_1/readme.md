@@ -182,7 +182,7 @@ $ git log scenario1 master-your-name origin/master-your-name
     <details>
     <summary>Commit Diagram</summary>
 
-    After `my-fork` is PR-ed into `master-your-name`, `master-your-name` will point at a new commit `C'`, that represents the squahsed version of all commits from the `scenario1` branch.
+    After `my-fork` is PR-ed into `master-your-name`, `master-your-name` will point at a new commit `C'` (with a different commit hash than `C`), that represents the squahsed version of all commits from the `scenario1` branch.
     ```
     Our local Repo: 
     

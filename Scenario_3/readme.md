@@ -251,8 +251,8 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 
     Remote origin:
     
-             C another-engineer
-            /
+          C another-engineer
+         /
     A---B master-your-name
     ```
     </details>
@@ -276,7 +276,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 
     Remote my-fork:
     
-    A---B---C---D'' scenario3
+    A---B---C---D' scenario3
     
 
     Remote origin:
