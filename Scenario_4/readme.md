@@ -5,34 +5,7 @@ This exercise reflects the scenario when you rebase your changes on top of chang
 You will first attempt to rebase your changes made on feature branch on top of other engineers' changes in the same branch, and manually resolve any merge conflicts. Then, push the feature branch to remote. 
 
 # Instructions
-1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
-    <details>
-    <summary>Solution</summary>
-
-    Check `git status`, and see the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning) if there are any uncommitted changes.
-    </details>
-
-    <details>
-    <summary>Commit Diagram</summary>
-
-    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
-
-    ```
-    Our local repo:
-    
-    A---B master-your-name
-
-
-    Remote my-fork:
-
-    <nothing relevent to show>
-    
-    
-    Remote origin:
-
-    A---B master-your-name
-    ```
-    </details>
+1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 1. Create a feature branch on your local machine called `scenario4`
     <details>
     <summary>Solution</summary>
@@ -131,7 +104,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
     ```console
     $ git fetch my-fork 
     ```
-    More details about `git fetch` can be found in Step 5 of [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions)
+    More details about `git fetch` can be found in Step 5 of [Scenario_1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>

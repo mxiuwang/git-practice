@@ -8,34 +8,7 @@ What is a merge conflict?
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # Instructions 
-1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
-    <details>
-    <summary>Solution</summary>
-
-    Check `git status`, and see the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning) if there are any uncommitted changes.
-    </details>
-
-    <details>
-    <summary>Commit Diagram</summary>
-
-    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
-
-    ```
-    Our local repo:
-    
-    A---B master-your-name
-
-
-    Remote my-fork:
-
-    <nothing relevent to show>
-    
-    
-    Remote origin:
-
-    A---B master-your-name
-    ```
-    </details>
+1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 
 1. Create a feature branch on your local machine called `scenario3`
     <details>
@@ -125,13 +98,13 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```console
     $ git fetch origin
     ```
-    More details about `git fetch` can be found in Step 5 of [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions)
+    More details about `git fetch` can be found in Step 6 of [Scenario_1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
     
-    Be sure to `fetch` your changes, or use a Git GUI such as Tower or Sourcetree to visualize the commit diagram more easily.
+    **Note:** You can use a Git GUI such as Tower or Sourcetree to visualize the commit diagram more easily.
     ```
     Our local repo:
     

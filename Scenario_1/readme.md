@@ -19,14 +19,11 @@ Here is an example of how the commit diagram and commit logs can be matched:
 
 ![git log diagram initial](img/0_labelled.png)
     <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590527283623/8aeb97f63a333034b7438edff848cda281bbf56c) -->
-<<<<<<< HEAD
 
 Sometimes, a certain branch will not appear in commit logs. To ensure they appear, you can add the names of those branches as arguments to the `git log` commands.
 ```console
 $ git log scenario1 master-your-name origin/master-your-name
 ```
-=======
->>>>>>> a43b36c37ed2cf47da0d5fec54a4ef235f9bf0c8
 
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
@@ -115,6 +112,20 @@ $ git log scenario1 master-your-name origin/master-your-name
     $ git push -u my-fork scenario1
     ```
     </details>
+
+1. Fetch the latest references from Github
+    <details>
+    <summary>Solution</summary>
+
+    Refresh your local repo's pointers with the command
+    ```console
+    $ git fetch origin
+    ```
+    [Git fetch](https://git-scm.com/docs/git-fetch) downloads references from the repository specified in the argument, in this case `origin`. It will "notify" your local machine of the changes that were made online on Github. 
+
+    It is a good practice to run `git fetch` frequently, to ensure your remote references are up-to-date (you know about the latest commits). 
+    </details>
+    
     <details>
     <summary>Commit Diagram</summary>
 
