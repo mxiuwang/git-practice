@@ -25,6 +25,16 @@ Sometimes, a certain branch will not appear in commit logs. To ensure they appea
 $ git log scenario1 master-your-name origin/master-your-name
 ```
 
+# New Git commands in this section
+This is simply a list of all the new commands that will be used in this section. Please do further research on these commands if you wish to learn about the specific arguments used with these commands, or their other uses not outlined in these examples. 
+* `git log`
+* `git checkout`
+* `git stage`
+* `git commit`
+* `git push`
+* `git fetch`
+* `git pull`
+
 # Instructions
 1. On your local machine, create a new branch called `scenario1`.
     <details>

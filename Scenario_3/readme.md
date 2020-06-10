@@ -7,6 +7,9 @@ You will first attempt to rebase on a feature branch on top of other engineers' 
 What is a merge conflict?
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
+# New Git commands in this section
+No new commands 
+
 # Instructions 
 1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 
@@ -98,7 +101,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```console
     $ git fetch origin
     ```
-    More details about `git fetch` can be found in Step 6 of [Scenario_1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
+    More details about `git fetch` can be found in Step 6 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>

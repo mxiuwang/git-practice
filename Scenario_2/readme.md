@@ -7,6 +7,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
 ## What is rebasing?
 [Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
 
+# New Git commands in this section
+* `git rebase`
+
 # Instructions
 1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 1. Create a feature branch on your local machine called `Scenario2`.
@@ -99,7 +102,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```console
     $ git fetch origin
     ```
-    More details about `git fetch` can be found in Step 6 of [Scenario_1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
+    More details about `git fetch` can be found in Step 6 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
@@ -211,8 +214,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
-    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
     </details>
 
     <details>

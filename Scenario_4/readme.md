@@ -4,6 +4,9 @@ This exercise reflects the scenario when you rebase your changes on top of chang
 
 You will first attempt to rebase your changes made on feature branch on top of other engineers' changes in the same branch, and manually resolve any merge conflicts. Then, push the feature branch to remote. 
 
+# New Git commands in this section
+No new commands 
+
 # Instructions
 1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 1. Create a feature branch on your local machine called `scenario4`
@@ -104,7 +107,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
     ```console
     $ git fetch my-fork 
     ```
-    More details about `git fetch` can be found in Step 5 of [Scenario_1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
+    More details about `git fetch` can be found in Step 5 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
