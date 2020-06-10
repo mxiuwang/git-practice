@@ -4,41 +4,17 @@ This exercise reflects the scenario when you rebase your changes on top of chang
 
 You will first attempt to rebase your changes made on feature branch on top of other engineers' changes in the same branch, and manually resolve any merge conflicts. Then, push the feature branch to remote. 
 
+# New Git commands in this section
+No new commands 
+
 # Instructions
-1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
-    <details>
-    <summary>Solution</summary>
-
-    Check `git status`, and see the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning) if there are any uncommitted changes.
-    </details>
-
-    <details>
-    <summary>Commit Diagram</summary>
-
-    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
-
-    ```
-    Our local repo:
-    
-    A---B master-your-name
-
-
-    Remote my-fork:
-
-    <nothing relevent to show>
-    
-    
-    Remote origin:
-
-    A---B master-your-name
-    ```
-    </details>
+1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 1. Create a feature branch on your local machine called `scenario4`
     <details>
     <summary>Solution</summary>
     
     ```console
-    $ git checkout -b scenario3
+    $ git checkout -b scenario4
     ```
     </details>
 
@@ -48,7 +24,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
     ```
     Our local repo:
     
-    A---B master-your-name, scenario3
+    A---B master-your-name, scenario4
 
 
     Remote my-fork:
@@ -76,24 +52,43 @@ You will first attempt to rebase your changes made on feature branch on top of o
     <details>
     <summary>Solution</summary>
 
-    1. Stage and commit, and push your changes to `my-fork`
-        ```console
-        $ git stage -A
-        $ git commit -m "added 2 lines"
-        $ git push -u my-fork scenario4
-        ```
-    1. Open a PR to merge your changes from `my-fork` to `origin`
+    Stage and commit, and push your changes to `my-fork`
+    ```console
+    $ git stage -A
+    $ git commit -m "added a new line"
+    $ git push -u my-fork scenario4
+    ```
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
+    Our local repo:
+
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+    
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
     </details>
-1. Simulate changes made by another engineer **on your feature branch** (the one you just made available to all developers).
+
+1. Simulate changes made by another engineer **on your feature branch** (the one you just pushed).
     <details>
     <summary>Solution</summary>
 
-    1. Go to the [origin](https://github.intuit.com/Albertasaurus/git-practice/tree/master) repo on Github, choose the `scenario4` branch from the "Branch" dropdown, and open `FileToModify.txt` in the `Scenario_4` folder (the one you just PR-ed into this repo). 
+    1. Go to the `my-fork` repo on Github, choose the `scenario4` branch from the "Branch" dropdown, and open `FileToModify.txt` in the `Scenario_4` folder. 
     1. Add another line to `FileToModify.txt` so that your file now looks like:
         ```
         Line 1
@@ -108,16 +103,37 @@ You will first attempt to rebase your changes made on feature branch on top of o
     <details>
     <summary>Solution</summary>
 
-    Refresh your local repo's pointers with the command
+    Refresh your local repo's pointers to `my-fork` (because this repo changed) with the command
     ```console
-    $ git fetch origin
+    $ git fetch my-fork 
     ```
-    More details about `git fetch` can be found in Step 5 of [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions)
+    More details about `git fetch` can be found in Step 5 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
     
+    ```
+    Our local repo:
+
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
     </details>
 
 1. In the `scenario4` branch on your local repository, perform and commit your SECOND set of changes on the `FileToModify.txt`. 
@@ -127,7 +143,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
     <details>
     <summary>Solution</summary>
 
-    1. On your local machine, open `FileToModify.txt` in the `Scenario_4` folder of your `scenario4` branch, and add in a line so that your `FileToModify.txt` should look something like:
+    1. On your local machine, open `FileToModify.txt` in the `Scenario_4` folder of your `scenario4` branch, and add in a line so that your `FileToModify.txt` looks like:
         ```
         Line 1
         Line 2
@@ -137,22 +153,45 @@ You will first attempt to rebase your changes made on feature branch on top of o
     1. Stage and commit your changes
         ```console
         $ git stage -A
-        $ git commit -m "added a line to scenario 4"
+        $ git commit -m "added another line to scenario 4"
         ```
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
+    Our local repo:
+
+            E scenario4 (change #2)
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
     </details>
 
 1. Rebase your changes on top of the new changes pulled from the remote `scenario4` branch in the `origin` repo. Resolve any merge conflicts. 
     <details>
     <summary>Solution</summary>
 
-    1. Try to rebase your changes on top of the new changes made by another engineer in `scenario4`. A merge conflict should appear.
+    1. Try to rebase your changes on top of the new changes made by another engineer in `my-fork/scenario4`. A merge conflict should appear.
         ```console
-        $ git rebase origin/scenario4
+        $ git rebase my-fork/scenario4
         ```
     1. Resolve the merge conflict(s)
         
@@ -180,7 +219,33 @@ You will first attempt to rebase your changes made on feature branch on top of o
 
     <details>
     <summary>Commit Diagram</summary>
+    
+    Recall, `E'` represents the same change as `E`, but with a different commit hash.
+    ```
+    Our local repo:
 
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
     </details>
 
 1. Push changes to `my-fork/scenario4`
@@ -195,19 +260,83 @@ You will first attempt to rebase your changes made on feature branch on top of o
     <details>
     <summary>Commit Diagram</summary>
 
+    ```
+    Our local repo:
+
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote origin:
+    
+    A---B master-your-name
+    ```
     </details>
 
-1. Open a Pull Request (PR) on Github to merge changes from `scenario4` in `my-fork` to `origin/master-<your-name>`.
+1. Open a Pull Request (PR) on Github to merge changes from `my-fork/scenario4` to `origin/master-<your-name>`.
     <details>
     <summary>Solution</summary>
 
     1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
-    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    1. Run `git fetch origin` to refresh your local repo's pointers  
+    1. Check that the commits are in the right order with `git log`, or a Git GUI.
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
 
+    Recall, `E''` represents a big commit containing all the previous commits the squashed together (`C`, `D`, `E`). It has a different commit hash than `E` and `E'`. 
+    ```
+    Our local repo:
+
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote my-fork:
+    
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+
+
+    Remote origin:
+
+                E'' All changes (commits C, D, and E')
+               /
+              E' scenario4 (change #2)
+             /
+            D Another engineer 
+           /
+          C scenario4 (change #1)
+         /
+    A---B master-your-name
+    ```
     </details>
 
 # End Result

@@ -7,40 +7,11 @@ You will learn how to rebase your changes on a feature branch on top of other en
 ## What is rebasing?
 [Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
 
+# New Git commands in this section
+* `git rebase`
+
 # Instructions
-1. Update/reset your repo so that your local repo and `origin` are pointing the the same commit.
-    <details>
-    <summary>Solution</summary>
-
-    Check for any uncommitted changes with the command: 
-    ```console
-    $ git status
-    ```
-    Files with unstaged or uncommitted changes will appear here. If there are none, you can continue to the next step. If there are uncomitted files, perform steps in the [README --> Cleaning](https://github.intuit.com/Albertasaurus/git-practice/#Cleaning)
-    </details>
-
-    <details>
-    <summary>Commit Diagram</summary>
-    Use `git log` to verify that commit logs match the following commit diagram. If you forget how to do so, refer back to `scenario1`.
-
-    Our local repo and `origin` both point to the existing content in the repo. Verify this is true using the commit logs in `git log` (and also at every step). 
-
-    ```
-    Our local repo:
-    
-    A---B master-your-name
-
-
-    Remote my-fork:
-
-    <nothing relevent to show>
-    
-    
-    Remote origin:
-
-    A---B master-your-name
-    ```
-    </details>
+1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
 1. Create a feature branch on your local machine called `Scenario2`.
     <details>
     <summary>Solution</summary>
@@ -127,13 +98,11 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    Refresh your local repo's pointers with the command
+    Refresh your local repo's pointers to `origin` with the command
     ```console
     $ git fetch origin
     ```
-    [Git fetch](https://git-scm.com/docs/git-fetch) downloads references from the repository specified in the argument, in this case `origin`. It will "notify" your local machine of the changes that were made online on Github. 
-
-    It is a good practice to run `git fetch` frequently, to ensure that we are always working with the latest code. 
+    More details about `git fetch` can be found in Step 6 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
@@ -141,7 +110,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
    
     The commit that contains the other engineer's changes will be represented in `C` in the following diagrams.
     
-    **Note:** If `origin/master-your-name` does not appear in your `git log`, you can use the command `git log origin/master-your-name` to ensure it appears. 
+    Recall: Use the command `git log origin/master-your-name` if the branch does not appear with `git log`. 
     
     Alternatively, this may be visualized more easily in a Git GUI such as Tower or Sourcetree. Be sure to `fetch` your changes.
     ```
@@ -217,6 +186,8 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Commit Diagram</summary>
 
+    **Note:**: the commit diagram for remote repos will not appear correctly until you update references with `git fetch`. 
+
     ```
     Our local repo:
 
@@ -243,20 +214,13 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
-    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
     </details>
 
     <details>
     <summary>Commit Diagram</summary>
     
-    Notes: 
-    * The commit diagram is illustrated below, but changes will not appear in your `git log` until you run `git fetch`.
-    * For the same reason as above, our local `master-your-name` will remain at commit `D'` until the command 
-    ```console
-    $ git pull -u origin master-your-name
-    ```
-    is run. After it is run, your local repo will be at commit `D''`.
+    After `git fetch`, your log should look like the following. Note that `D'` becomes `D''` (the commit hash changes again) because of the squash.
 
     ```
     our local repo:
