@@ -1,7 +1,0 @@
-commit 1
-<<<<<<< HEAD
-commit 2 - correct
-=======
-commit 2
-commit 3
->>>>>>> 1a4d397... commit 3
