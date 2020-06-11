@@ -1,4 +1,8 @@
 Line 1 
+<<<<<<< HEAD
 Line 2 
 Commit 1
 Commit 2
+=======
+Line 2 
+>>>>>>> parent of 753aba1... commit 1
