@@ -293,9 +293,9 @@ No new commands
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario4` to `origin/master-your-name`. 
     1. Run `git fetch origin` to refresh your local repo's pointers  
-    1. Check that the commits are in the right order with `git log`, or a Git GUI.
+    1. Using `git log` or a Git GUI, check that the commits are in the right order. 
     </details>
 
     <details>

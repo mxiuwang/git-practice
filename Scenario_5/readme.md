@@ -57,6 +57,81 @@ The same process can also be used if the the series of commits have not been pus
     after the second commit.
 
     Stage and push these changes to `my-fork/scenario4`, and open a PR to merge these changes with `origin/master-your-name`.
-1. Suppose you realize you made a mistake in your first commit, and you actually meant to write `commit 1 - correct commit`, so revert revert back to commit 1. 
-1. Stack the changes made by commit 2 on top of your corrected commit 1. 
+1. Suppose you realize you made a mistake in your first commit, and you actually meant to write `commit 1 - correct commit`. Revert back to pre-commit 1 state. 
+    <details>
+    <summary>Solution</summary>
+    
+    1. Ensure there are no changes in the working directory by either commiting them with `git commit`, or discarding them with `git clean -df`. 
+    1. Open the commit log with `git log`, and copy down all the commit hashes up to the one you want to revert to. In this case, copy the commit hashes of commit 1 and commit 2. 
+        ```console
+        $ git log
+        ```
+        ![commit hashes diagram](img/s5.4.2.png)
+        <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1591907312923/0e1cfb9bc6e420aacae3f076f3690015aec88c45) -->
+    1. Revert to commit 1
+        ```console
+        $ git revert <commit hash of commit 1>
+        ```
+        1. Resolve merge conflicts if necessary
+        1. Add changes with `git add -A`, and continue revert with `git revert --continue`. 
+        1. If necessary, type `:q` then press `enter` in your terminal to exit the confirmation message. 
+    1. Run `git log`, and observe there is a new commit which is a "Revert "commit 1"". The hash number of the commit was reverted is provided.
+
+        Notice that the existing commit 2 and commit 1 are still in the commit stack, but a new commit "reverted" commit 1. 
+    </details>
+1. Fix commit 1 by adding in the correct message "commit 1 - correct commit" to line 3 in `FileToModify.txt`. Stage and commit these changes.
+    <details>
+    <summary>Solution</summary>
+    
+    1. Edit your `FileToModify.txt` so that it is now correct:
+        ```
+        Line 1 
+        Line 2 
+        commit 1 - correct commit 
+        ```
+    1. Stage and commit your changes
+        ```console
+        $ git stage -A
+        $ git commit -m "commit 1 - correct commit"
+        ```
+    </details>
+1. Stack your commit 2 on top of your corrected commit 1 by cherry-picking commit 2. 
+    <details>
+    <summary>Solution</summary>
+    
+    1. Use the (git cherry-pick)[https://www.atlassian.com/git/tutorials/cherry-pick] command to pick out any commits (in this case commit 2) that came after commit 1, and stack them on top of the correct commit 1. 
+        ```console
+        git cherry pick <commit hash of commit 2>
+        ```
+    1. Resolve merge conflicts if necessary. Your `FileToModify.txt` should now look like: 
+        ```
+        Line 1 
+        Line 2 
+        commit 1 - correct commit 
+        commit 2
+        ```
+        1. If you had to resolve merge conflicts, stage your changes and continue with cherry-picking.
+            ```console
+            $ git stage -A
+            $ git cherry-pick --continue
+            ```
+        1. If necessary, type `:q` then press enter in your terminal to exit the confirmation message. 
+    1. Run `git log`, and observe that the order of commits matches the commit diagram. 
+    </details>
 1. Push your changes to `my-fork/scenario4`, then open a PR to merge these changes with `origin/master-your-name`. 
+    <details>
+    <summary>Solution</summary>
+
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario5` to `origin/master-your-name`. 
+    1. Run `git fetch origin` to refresh your local repo's pointers  
+    1. Using `git log` or a Git GUI, check that the commits are in the right order. 
+    </details>
+
+# End Result
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
+```
+Line 1
+Line 2
+commit 1 - correct commit
+commit 2 
+```
