@@ -1,3 +1,9 @@
 Line 1 
 Line 2 
+<<<<<<< HEAD
 Commit 1 - correct commit 
+=======
+Commit 1 - correct 
+
+Commit 2 
+>>>>>>> 053a1a7... commit 2
