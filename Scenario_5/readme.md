@@ -41,22 +41,89 @@ The same process can also be used if the the series of commits have not been pus
     ```
     </details>
 
-1. Make 2 seperate commits to `FileToModify.txt` so that your file looks like 
+1. Make 2 **seperate** commits to `FileToModify.txt` so that your file looks like this after the first commit :
     ```
     Line 1 
     Line 2 
     commit 1
+
     ```
-    after the first commit, and 
+    and like this after the second commit:
     ```
     Line 1 
     Line 2 
     commit 1
     commit 2
     ```
-    after the second commit.
 
     Stage and push these changes to `my-fork/scenario4`, and open a PR to merge these changes with `origin/master-your-name`.
+    <details>
+    <summary>Solution</summary>
+    
+    1. Add a line to `FileToModify.txt` so that it looks like (make sure you hit "Enter" after "commit 1" so that merge conflicts are minimized): 
+    ```
+    Line 1 
+    Line 2 
+    commit 1
+
+    ```
+    1. Stage and commit your changes 
+    ```console
+    $ git stage -A
+    $ git commit -m "commit 1"
+    ```
+
+    1. Add another line to `FileToModify.txt` so that it now looks like:
+    ```
+    Line 1 
+    Line 2 
+    commit 1
+    commit 2
+    ```
+
+    1. Stage and commit your changes 
+    ```console
+    $ git stage -A
+    $ git commit -m "commit 2"
+    ```
+    1. Push your changes
+    ```console
+    $ git push -u my-fork master-your-name 
+    ```
+    1. Open a PR on Github and merge your changes from `my-fork/scenario5` to `origin/master-your-name`.
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+
+            D sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+            D' sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+    
+
+    Remote origin:
+    
+            D'' sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+    ```
+    </details>
 1. Suppose you realize you made a mistake in your first commit, and you actually meant to write `commit 1 - correct commit`. Revert back to pre-commit 1 state. 
     <details>
     <summary>Solution</summary>
@@ -79,6 +146,32 @@ The same process can also be used if the the series of commits have not been pus
 
         Notice that the existing commit 2 and commit 1 are still in the commit stack, but a new commit "reverted" commit 1. 
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+
+              E Reverted commit 1
+             /
+            D sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+    A---B---C---D' scenario5 (commit 2)
+    
+
+    Remote origin:
+    
+    A---B---C---D'' scenario5 (commit 2)
+    ```
+    </details>
 1. Fix commit 1 by adding in the correct message "commit 1 - correct commit" to line 3 in `FileToModify.txt`. Stage and commit these changes.
     <details>
     <summary>Solution</summary>
@@ -94,6 +187,34 @@ The same process can also be used if the the series of commits have not been pus
         $ git stage -A
         $ git commit -m "commit 1 - correct commit"
         ```
+    </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+
+                F commit 1 - correct commit 
+               /
+              E Reverted commit 1
+             /
+            D sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+    A---B---C---D' scenario5 (commit 2)
+    
+
+    Remote origin:
+    
+    A---B---C---D'' scenario5 (commit 2)
+    ```
     </details>
 1. Stack your commit 2 on top of your corrected commit 1 by cherry-picking commit 2. 
     <details>
@@ -118,6 +239,36 @@ The same process can also be used if the the series of commits have not been pus
         1. If necessary, type `:q` then press enter in your terminal to exit the confirmation message. 
     1. Run `git log`, and observe that the order of commits matches the commit diagram. 
     </details>
+
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+
+                  G commit 2 (cherry-picked)
+                 /
+                F commit 1 - correct commit 
+               /
+              E Reverted commit 1
+             /
+            D sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+    A---B---C---D' scenario5 (commit 2)
+    
+
+    Remote origin:
+    
+    A---B---C---D'' scenario5 (commit 2)
+    ```
+    </details>
 1. Push your changes to `my-fork/scenario4`, then open a PR to merge these changes with `origin/master-your-name`. 
     <details>
     <summary>Solution</summary>
@@ -127,8 +278,57 @@ The same process can also be used if the the series of commits have not been pus
     1. Using `git log` or a Git GUI, check that the commits are in the right order. 
     </details>
 
+    <details>
+    <summary>Commit Diagram</summary>
+
+    ```
+    Our local repo:
+
+                  G commit 2 (cherry-picked)
+                 /
+                F commit 1 - correct commit 
+               /
+              E Reverted commit 1
+             /
+            D sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+
+
+    Remote my-fork:
+
+                  G' commit 2 (cherry-picked)
+                 /
+                F commit 1 - correct commit 
+               /
+              E Reverted commit 1
+             /
+            D' sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+    
+
+    Remote origin:
+    
+                  G'' commit 2 (cherry-picked)
+                 /
+                F commit 1 - correct commit 
+               /
+              E Reverted commit 1
+             /
+            D'' sceario5 (commit 2)
+           /
+          C scenario5 (commit 1)
+         / 
+    A---B master-your-name
+    ```s
+
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
+Afterwards, `FileToModify.txt` should look like the following in `originmaster-<your-name>`:
 ```
 Line 1
 Line 2
