@@ -1,5 +1,5 @@
 Line 1 
 Line 2 
-Commit 1 - correct 
+Commit 1
 
 Commit 2 
