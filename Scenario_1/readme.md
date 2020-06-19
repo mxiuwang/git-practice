@@ -25,6 +25,8 @@ Sometimes, a certain branch will not appear in commit logs. To ensure they appea
 $ git log scenario1 master-your-name origin/master-your-name
 ```
 
+This command will display the branches `scenario1`, `master-your-name`, and `origin/master-your-name`.
+
 # New Git commands in this section
 This is simply a list of all the new commands that will be used in this section. Please do further research on these commands if you wish to learn about the specific arguments used with these commands, or their other uses not outlined in these examples. 
 * `git log`
@@ -174,15 +176,15 @@ This is simply a list of all the new commands that will be used in this section.
     <summary>Solution</summary>
     
     1. Go to `your-fork` (where you pushed your changes) on the Github website. By deafult, this is located at `github.intuit.com/<your-name>/git-practice`
-    1. Click "New pull request" (beside "Branch: master-your-name"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
-    1. Scroll down to see all the file change(s) you have made, and ensure they are correct. Ensure the "head repository" is your your fork, the "base repository" is Albertasaurus/git-practice, and that the compared and base branches are both `master-your-name`.
+    1. Click "New pull request" (beside "Branch: master-<your-name>"). Notice this action automatically takes you to the `git-practice` repo in Albertasaurus, as this is where you are trying to merge your code change to. 
+    1. Scroll down to see all the file change(s) you have made, and ensure they are correct. Ensure the "head repository" is your your fork, the "base repository" is Albertasaurus/git-practice, and that the compared and base branches are both `master-<your-name>`.
 
         ![Git PR](img/6_PR.png) <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590774642826/ba1c07bcc7ddbb787ce7e6e27de3e02ac7fd2c23) -->
 
     1. Click the green "Create pull request" button. Add a descriptive title and description illustrating the nature of your code change if you wish. Once all checks have passed, choose "Squash and merge" from the dropdown beside "Merge pull request", then "Confirm merge". 
 
-        "[Squash and merge](https://github.blog/2016-04-01-squash-your-commits/#enter-commit-squashing)" takes all the commits pushed to `my-fork` and pushes them into `master-your-name` in Albertasaurus as one single commit.
-    1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-your-name` branch, and see that your changes are merged.
+        "[Squash and merge](https://github.blog/2016-04-01-squash-your-commits/#enter-commit-squashing)" takes all the commits pushed to `my-fork` and pushes them into `master-<your-name>` in Albertasaurus as one single commit.
+    1. You can go to the "code" tab in `Albertasaurus/git-practice`, go to the `master-<your-name>` branch, and see that your changes are merged.
 
 1. Check that your changes are pushed and merged correctly
     <details>
@@ -203,7 +205,7 @@ This is simply a list of all the new commands that will be used in this section.
     <details>
     <summary>Commit Diagram</summary>
 
-    After `my-fork` is PR-ed into `master-your-name`, `master-your-name` will point at a new commit `C'` (with a different commit hash than `C`), that represents the squahsed version of all commits from the `scenario1` branch.
+    After `my-fork` is PR-ed into `master-<your-name>`, `master-<your-name>` will point at a new commit `C'` (with a different commit hash than `C`), that represents the squahsed version of all commits from the `scenario1` branch.
     ```
     Our local Repo: 
     

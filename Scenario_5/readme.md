@@ -56,7 +56,7 @@ The same process can also be used if the the series of commits have not been pus
     commit 2
     ```
 
-    Stage and push these changes to `my-fork/scenario4`, and open a PR to merge these changes with `origin/master-your-name`.
+    Stage and push these changes to `my-fork/scenario4`, and open a PR to merge these changes with `origin/master-<your-name>`.
     <details>
     <summary>Solution</summary>
     
@@ -90,7 +90,7 @@ The same process can also be used if the the series of commits have not been pus
     ```console
     $ git push -u my-fork master-your-name 
     ```
-    1. Open a PR on Github and merge your changes from `my-fork/scenario5` to `origin/master-your-name`.
+    1. Open a PR on Github and merge your changes from `my-fork/scenario5` to `origin/master-<your-name>`.
     </details>
 
     <details>
@@ -269,11 +269,11 @@ The same process can also be used if the the series of commits have not been pus
     A---B---C---D'' scenario5 (commit 2)
     ```
     </details>
-1. Push your changes to `my-fork/scenario4`, then open a PR to merge these changes with `origin/master-your-name`. 
+1. Push your changes to `my-fork/scenario4`, then open a PR to merge these changes with `origin/master-<your-name>`. 
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario5` to `origin/master-your-name`. 
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario5` to `origin/master-<your-name>`. 
     1. Run `git fetch origin` to refresh your local repo's pointers  
     1. Using `git log` or a Git GUI, check that the commits are in the right order. 
     </details>

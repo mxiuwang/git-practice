@@ -79,12 +79,12 @@ No new commands
     A---B master-your-name
     ```
     </details>
-1. Simulate changes made by another engineer to "`master`" by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file on the `master-your-name` branch in `origin`.
+1. Simulate changes made by another engineer to "`master`" by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file on the `master-<your-name>` branch in `origin`.
     <details>
     <summary>Solution</summary>
 
     1. Navigate to the [Scenario_3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3) folder in `origin`. 
-    1. From the `branch` dropdown, choose `master-your-name`.
+    1. From the `branch` dropdown, choose `master-<your-name>`.
     1. Open `FileToModify.txt`, and change the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that the file looks like:
         ```
         Line 1
@@ -129,17 +129,17 @@ No new commands
     A---B master-your-name
     ```
     </details>
-1. Rebase your changes on top of the new changes pulled from the remote `master-your-name` branch in the `origin` repo. Resolve any merge conflicts. 
+1. Rebase your changes on top of the new changes pulled from the remote `master-<your-name>` branch in the `origin` repo. Resolve any merge conflicts. 
     <details>
     <summary>Solution</summary>
 
-    1. Update your local `master-your-name` branch with the latest changes from Git
+    1. Update your local `master-<your-name>` branch with the latest changes from Git
         ```console
         $ git checkout master-your-name
         $ git pull origin master-your-name 
         $ git checkout scenario3
         ```
-    1. Try to rebase your changes on top of the new changes made by another engineer in `master-your-name`. A merge conflict should appear.
+    1. Try to rebase your changes on top of the new changes made by another engineer in `master-<your-name>`. A merge conflict should appear.
         ```console
         $ git rebase master-your-name
         ```
@@ -237,7 +237,7 @@ No new commands
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-your-name`. 
+    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-<your-name>`. 
     1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
     </details>
 

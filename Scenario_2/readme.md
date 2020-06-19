@@ -5,7 +5,7 @@ This exercise reflects the scenario when other Intuit engineers have made change
 You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the `master-your-name` branch, assuming there are no merge conflicts. 
 
 ## What is rebasing?
-[Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-your-name` branch to your feature branch. 
+[Rebase](https://www.git-tower.com/learn/git/glossary/rebase) integrates changes from one branch to another, in this case allowing the user to integrate the changes made by another engineer in the `master-<your-name>` branch to your feature branch. 
 
 # New Git commands in this section
 * `git rebase`
@@ -78,7 +78,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. In this step, we are going to act like another engineer making changes to the repo on `master-your-name` branch.  We'll do this by editing a file directly from the github website.  
+1. In this step, we are going to act like another engineer making changes to the repo on `master-<your-name>` branch.  We'll do this by editing a file directly from the github website.  
 
     **Note:** Normally, one does not edit files in this fashion; it is done here to easily simulate someone else making a change.
 
@@ -86,7 +86,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <summary>Solution</summary>
 
     1. Navigate to the [Scenario_2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2) folder in `origin`.
-    1. From the `branch` dropdown, choose `master-your-name`.
+    1. From the `branch` dropdown, choose `master-<your-name>`.
     1. Click the "Create new file" button 
     ![create new file](img/s2.4_newFile.png)
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
@@ -110,7 +110,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
    
     The commit that contains the other engineer's changes will be represented in `C` in the following diagrams.
     
-    Recall: Use the command `git log origin/master-your-name` if the branch does not appear with `git log`. 
+    Recall: Use the command `git log origin/master-<your-name>` if the branch does not appear with `git log`. 
     
     Alternatively, this may be visualized more easily in a Git GUI such as Tower or Sourcetree. Be sure to `fetch` your changes.
     ```
@@ -133,11 +133,11 @@ You will learn how to rebase your changes on a feature branch on top of other en
     A---B master-your-name
     ```
     </details>
-1. Rebase your changes on top of the new changes pulled from the remote `master-your-name`
+1. Rebase your changes on top of the new changes pulled from the remote `master-<your-name>`
     <details>
     <summary>Solution</summary>
     
-    1. Update `master-your-name` with the latest changes from Git
+    1. Update `master-<your-name>` with the latest changes from Git
         ```console
         $ git checkout master-your-name
         $ git pull origin master-your-name 
@@ -214,7 +214,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-your-name`. 
+    Open a Pull Request on Githunb to merge changes from `my-fork/scenario2` to `origin/master-<your-name>`. 
     </details>
 
     <details>
