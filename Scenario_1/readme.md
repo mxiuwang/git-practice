@@ -162,7 +162,7 @@ This is simply a list of all the new commands that will be used in this section.
 
     Remote "my-fork": 
 
-          C' scenario1 (added new line to the end) 
+          C scenario1 (added new line to the end) 
          /
     A---B master-your-name
 
@@ -209,7 +209,7 @@ This is simply a list of all the new commands that will be used in this section.
     <details>
     <summary>Commit Diagram</summary>
 
-    After `my-fork` is PR-ed into `master-<your-name>`, `master-<your-name>` will point at a new commit `C'` (with a different commit hash than `C`), that represents the squahsed version of all commits from the `scenario1` branch.
+    After `my-fork` is PR-ed into `origin/master-<your-name>`, `origin/master-<your-name>` will point at a new commit `C'` (with a different commit hash than `C`). `C'` represents the squahsed version of all commits PR-ed from the `scenario1` branch.
     ```
     Our local Repo: 
     
@@ -220,14 +220,14 @@ This is simply a list of all the new commands that will be used in this section.
 
     Remote "my-fork": 
 
-          C' scenario1 (added new line to the end) 
+          C scenario1 (added new line to the end) 
          /
     A---B master-your-name
 
 
     Remote "origin":
     
-          C'' scenario1 (added new line to the end) 
+          C' scenario1 (added new line to the end) 
          /
     A---B master-your-name
     ```
