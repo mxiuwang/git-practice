@@ -56,7 +56,7 @@ This is simply a list of all the new commands that will be used in this section.
     ```
     Our local repo:
     
-    A---B master-your-name, scenario1
+    A---B master-your-name
     
 
     Remote "my-fork":
@@ -97,8 +97,8 @@ This is simply a list of all the new commands that will be used in this section.
 
     Branch "scenario1" is pointing at your new commit, C.
     
-      C scenario1
-     /
+          C scenario1
+         /
     A---B master-your-name
     
 
@@ -149,15 +149,15 @@ This is simply a list of all the new commands that will be used in this section.
     ```
     Our local Repo: 
     
-      C scenario1
-     /
+          C scenario1
+         /
     A---B master-your-name
     
 
     Remote "my-fork": 
 
-      C scenario1
-     /
+          C scenario1
+         /
     A---B master-your-name
 
 

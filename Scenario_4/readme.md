@@ -24,7 +24,7 @@ No new commands
     ```
     Our local repo:
     
-    A---B master-your-name, scenario4
+    A---B master-your-name
 
 
     Remote my-fork:

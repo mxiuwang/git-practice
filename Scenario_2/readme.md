@@ -27,7 +27,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-    A---B master-your-name, scenario2
+    A---B master-your-name
 
 
     Remote my-fork:

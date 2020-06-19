@@ -4,7 +4,8 @@ This exercise reflects the scenario when you rebase your changes on top of chang
 
 You will first attempt to rebase on a feature branch on top of other engineers' changes in the master branch, manually resolve any merge conflicts, then push all changes to the remote. 
 
-What is a merge conflict?
+## What is a merge conflict?
+
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # New Git commands in this section
@@ -28,7 +29,7 @@ No new commands
     ```
     Our local repo:
     
-    A---B master-your-name, scenario3
+    A---B master-your-name
 
 
     Remote my-fork:
@@ -78,7 +79,7 @@ No new commands
     A---B master-your-name
     ```
     </details>
-1. Simulate changes made by another engineering to `master` by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file on the `master-your-name` branch in `origin`.
+1. Simulate changes made by another engineer to "`master`" by going to Github, and adding `Line 3A - Added by another engineer` in the same `FileToModify.txt` file on the `master-your-name` branch in `origin`.
     <details>
     <summary>Solution</summary>
 
@@ -90,7 +91,7 @@ No new commands
         Line 2
         Line 3A - Added by another engineer
         ```
-    1. Click "Commit changes"
+    1. Add a commit message if you wish, and click "Commit changes"
     </details>
 
 1. Fetch the latest references from Github

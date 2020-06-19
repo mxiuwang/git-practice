@@ -27,7 +27,7 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
     
-    A---B master-your-name, scenario5
+    A---B master-your-name
 
 
     Remote my-fork:
