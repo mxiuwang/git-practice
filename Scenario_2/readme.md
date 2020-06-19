@@ -63,7 +63,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-          D scenario2
+          D scenario2 (Added a new line)
          /
     A---B master-your-name
     
@@ -116,7 +116,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
     
-          D scenario2
+          D scenario2 (Added a new line)
          /
     A---B master-your-name
     
@@ -152,11 +152,11 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Commit Diagram</summary>
 
-    Observe that your commit, `D` now has a different commit number (check using `git log`). We will refer to the rebased commit as `D'`. Commit `D'` is stacked on top of `C`.
+    Observe that your commit `D` now has a different commit number (check using `git log`). We will refer to the rebased commit as `D'`. Commit `D'` is stacked on top of `C`.
     ```
     Our local repo:
 
-              D' scenario 2
+              D' scenario2 (Added a new line)
              /
     A---B---C another engineer 
     
@@ -191,14 +191,14 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
 
-              D' scenario2
+              D' scenario2 (Added a new line)
              /
     A---B---C another engineer 
     
 
     Remote my-fork:
 
-              D' scenario2
+              D' scenario2 (Added a new line)
              /
     A---B---C another engineer 
     
@@ -223,19 +223,25 @@ You will learn how to rebase your changes on a feature branch on top of other en
     After `git fetch`, your log should look like the following. Note that `D'` becomes `D''` (the commit hash changes again) because of the squash.
 
     ```
-    our local repo:
-    
-    A---B---C---D' master-your-name
+    Our local repo:
 
+              D' scenario2 (Added a new line)
+             /
+    A---B---C another engineer 
+    
 
     Remote my-fork:
-    
-    A---B---C---D'' scenario2
-    
-    
-    Remote origin:
 
-    A---B---C---D'' master-your-name
+              D' scenario2 (Added a new line)
+             /
+    A---B---C another engineer 
+    
+
+    Remote origin:
+    
+              D'' scenario2 (Added a new line)
+             /
+    A---B---C another engineer 
     ```
     </details>
     
