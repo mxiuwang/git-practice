@@ -97,19 +97,23 @@ This is simply a list of all the new commands that will be used in this section.
     ```
     Our local Repo: 
 
-    Branch "scenario1" is pointing at your new commit, C.
+    Branch scenario1" is pointing at your new commit, C. It has the commit message "added new line to the end".
     
-          C scenario1
+          C scenario1 (added new line to the end) 
          /
     A---B master-your-name
     
 
     Remote "my-fork": 
+
+    Nothing is shown because nothing has been pushed/exported to the remote yet. 
     
     <nothing relevent to show>
     
 
     Remote "origin": 
+
+    Remote origin contains the original content from which we created our local repo. 
     
     A---B master-your-name
     ```
@@ -151,14 +155,14 @@ This is simply a list of all the new commands that will be used in this section.
     ```
     Our local Repo: 
     
-          C scenario1
+          C scenario1 (added new line to the end) 
          /
     A---B master-your-name
     
 
     Remote "my-fork": 
 
-          C scenario1
+          C' scenario1 (added new line to the end) 
          /
     A---B master-your-name
 
@@ -209,17 +213,23 @@ This is simply a list of all the new commands that will be used in this section.
     ```
     Our local Repo: 
     
-    A---B---C' master-your-name
-
+          C scenario1 (added new line to the end) 
+         /
+    A---B master-your-name
+    
 
     Remote "my-fork": 
-    
+
+          C' scenario1 (added new line to the end) 
+         /
     A---B master-your-name
 
 
     Remote "origin":
     
-    A---B---C' master-your-name
+          C'' scenario1 (added new line to the end) 
+         /
+    A---B master-your-name
     ```
     !["Final git log diagram"](img/7_s1final_gitLog_labelled.png) <!-- (This is the link to edit the diagram: https://app.mural.co/t/intuitqboteam/m/intuitqboteam/1590174462805/d8269296d9f97d5402299c2304a5fba7549a7a48) -->
     </details>

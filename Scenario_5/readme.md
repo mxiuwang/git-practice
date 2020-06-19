@@ -320,7 +320,7 @@ The same process can also be used if the the series of commits have not been pus
                /
               E Reverted commit 1
              /
-            D'' sceario5 (commit 2)
+            D'' scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
