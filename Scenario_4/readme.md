@@ -55,7 +55,7 @@ No new commands
     Stage and commit, and push your changes to `my-fork`
     ```console
     $ git stage -A
-    $ git commit -m "added a new line"
+    $ git commit -m "change #1"
     $ git push -u my-fork scenario4
     ```
     </details>
@@ -93,10 +93,10 @@ No new commands
         ```
         Line 1
         Line 2
-        Line 3 - Added by you 
-        Line 4A - Additions by another engineer
+        Line 3 - Added by you (change #1)
+        Line 4A - Another engineer 
         ```
-    1. 1. Click "Commit changes"
+    1. Include the commit message "Another engineer", and click "Commit changes"
     </details>
 
 1. Fetch the latest references from Github
@@ -147,13 +147,13 @@ No new commands
         ```
         Line 1
         Line 2
-        Line 3 - Added by you 
-        Line 4B - Also added by you 
+        Line 3 - Added by you (change #1)
+        Line 4B - Also added by you (change #2)
         ```
     1. Stage and commit your changes
         ```console
         $ git stage -A
-        $ git commit -m "added another line to scenario 4"
+        $ git commit -m "change #2"
         ```
     </details>
 
@@ -201,9 +201,9 @@ No new commands
         ```
         Line 1
         Line 2
-        Line 3 - Added by you
-        Line 4A - Additions by another engineer
-        Line 4B - Also added by you
+        Line 3 - Added by you (change #1)
+        Line 4A - Another engineer 
+        Line 4B - Also added by you (change #2)
         ```
     1. Add your changes, and continue the rebase.
         ```console
@@ -220,7 +220,7 @@ No new commands
     <details>
     <summary>Commit Diagram</summary>
     
-    Recall, `E'` represents the same change as `E`, but with a different commit hash.
+    Recall, `E'` represents the same change as `E`, but with a different commit hash after the rebase.
     ```
     Our local repo:
 
@@ -344,7 +344,7 @@ Afterwards, `FileToModify.txt` should look like the following in `origin/master-
 ```
 Line 1
 Line 2
-Line 3 - Added by you
-Line 4A - Additions by another engineer
-Line 4B - Also added by you
+Line 3 - Added by you (change #1)
+Line 4A - Another engineer 
+Line 4B - Also added by you (change #2)
 ```
