@@ -64,7 +64,7 @@ No new commands
     ```
     Our local repo:
     
-          D scenario3
+          D scenario3 (Line 3B - Added by you)
          /
     A---B master-your-name
     
@@ -112,7 +112,7 @@ No new commands
     ```
     Our local repo:
     
-          D scenario3
+          D scenario3 (Line 3B - Added by you)
          /
     A---B master-your-name
     
@@ -182,7 +182,7 @@ No new commands
     ```
     Our local repo:
 
-              D' scenario3
+              D' scenario3 (Line 3B - Added by you)
              /
     A---B---C another engineer 
     
@@ -214,14 +214,14 @@ No new commands
     ```
     Our local repo:
 
-              D' scenario3
+              D' scenario3 (Line 3B - Added by you)
              /
     A---B---C another engineer 
     
 
     Remote my-fork:
     
-              D' scenario3
+              D' scenario3 (Line 3B - Added by you)
              /
     A---B---C another engineer 
     
@@ -248,17 +248,17 @@ No new commands
     ```
     Our local repo:
         
-    A---B---C---D' scenario3
+    A---B---C---D' scenario3 (Line 3B - Added by you)
     
 
     Remote my-fork:
     
-    A---B---C---D' scenario3
+    A---B---C---D' scenario3 (Line 3B - Added by you)
     
 
     Remote origin:
     
-    A---B---C---D'' scenario3
+    A---B---C---D'' scenario3 (Line 3B - Added by you)
     ```
     </details>
 
