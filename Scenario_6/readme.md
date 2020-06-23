@@ -1,12 +1,32 @@
 # Rebase requiring force push 
 
-This exercise reflects the scenario where you must rebase updates in your feature branch (that have already been pushed to your fork) on top of changes made by Intuit engineers in master, but you must use a `Force push` to rewrite commit history. 
+This exercise reflects the scenario where you must rebase updates in your feature branch that have already been pushed to your fork, on top of changes other Intuit engineers made master. However, you must use a `Force push` to rewrite commit history. 
 
-## What is "Force pushing"?
+## What is "[Force pushing](https://www.atlassian.com/git/tutorials/syncing/git-push)"?
 
-Normally, `git push` exports local commits to a remote repository by "fast forwarding" the commit history in the remote (Git simply stacks your new commits on top of the existing ones in the remote in a linear fashion). Git will not allow you to push when it results in a non-fast-forward merge in the destination repo. This is often the case when we use commands like `git rebase` that re-write the commit history, resulting in divergent commit histories between the local and remote repos. 
+Normally, `git push` exports local commits to a remote repository by "fast forwarding" the commit history in the remote (Git simply stacks all your new commits on top of the existing ones in a linear fashion). 
 
-The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/tutorials/syncing/git-push) is a very dangerous yet powerful tool that allows you to push changes to a remote repo even when it results in a non-fast-foward merge. Therefore, it should not be used unless you're absolutely certain what you're doing. `git push --force` overwrites the existing content and commit history with the content and history you're pushing. 
+Git will not allow you to push when it results in a non-fast-forward merge in the destination repo. This is often the case when we use commands that re-write the commit history like `git rebase`, resulting in divergent commit histories between the local and remote repos. 
+
+If this is the git log before new changes are pushed:
+```
+A---B Existing cotent 
+```
+This is allowed after a push:
+```
+      C---D New content (fast-forwarded)
+     /
+A---B Existing content 
+```
+
+This is not allowed:
+```
+      B---D New content (not fast-forwarded)
+     /
+A---C Existing content 
+```
+
+The `--force` flag in git push <remote> --force is a very dangerous, yet powerful tool that allows you to push changes to a remote repo even when it results in a non-fast-foward merge (the second case). It should not be used unless you're **ABSOLUTELY CERTAIN** what you're doing. `git push --force` overwrites the existing content and commit history with the content and history you're pushing (see above). 
 
 # New Git commands in this section
 * `git push --force`
@@ -86,7 +106,6 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     1. From the `branch` dropdown, choose `master-<your-name>`.
     1. Open `FileToModify.txt`, and change the line `Line 3B - Added by you` to `Line 2 - Added by another engineer` so that the file looks like:
         ```
-        Line 1 - Local changes 
         Line 2 - Added by another engineer 
         ```
     1. Add the commit message `Added by another engineer`, and click "Commit changes".
@@ -132,7 +151,8 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
         Line 1 - Local changes
         Line 2 - Added by another engineer 
         ```
-    
+        Add your changes, and finish the rebase.
+
         If you forget how to do so, please refer to Step 6 in [scenario 3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3/#Instructions). 
 
     1. Check your rebased changes are in the expected order
@@ -174,9 +194,7 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
         It should result in an error:
         !["git push error"](img/s6.6.1.png)
         The push is rejected by Git because it results in a non-fast-forward merge in the destination repo. 
-    1. Since we are **ABSOLUTELY SURE** it is safe to push our code up to our remote `my-fork` repo even if it overrwrites the existing content, force push your changes to remote my-fork. 
-        
-        Double check the content you are pushing if you are unsure.
+    1. Double check that the changes you want to push in `FileToModify.txt` are correct, and that you are not pushing any additional changes. Once you are **ABSOLUTELY SURE** it is safe to push our code up to our remote `my-fork` repo even if it overrwrites the existing content, force push your changes to remote my-fork. 
 
         ```console
         $ git push -u --force my-fork scenario6
