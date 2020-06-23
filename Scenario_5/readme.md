@@ -60,7 +60,7 @@ The same process can also be used if the the series of commits have not been pus
     <details>
     <summary>Solution</summary>
     
-    1. Add a line to `FileToModify.txt` so that it looks like (make sure you hit "Enter" after "commit 1" so that merge conflicts are minimized): 
+    1. Add a line to `FileToModify.txt` so that it looks like (make sure you hit "Enter" after typing "commit 1" so that merge conflicts are minimized): 
     ```
     Line 1 
     Line 2 
@@ -88,7 +88,7 @@ The same process can also be used if the the series of commits have not been pus
     ```
     1. Push your changes
     ```console
-    $ git push -u my-fork master-your-name 
+    $ git push -u my-fork scenario5
     ```
     1. Open a PR on Github and merge your changes from `my-fork/scenario5` to `origin/master-<your-name>`.
     </details>
@@ -99,7 +99,7 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
 
-            D sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -108,7 +108,7 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote my-fork:
 
-            D' sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -117,14 +117,14 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote origin:
     
-            D'' sceario5 (commit 2)
+            D' scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
     A---B master-your-name
     ```
     </details>
-1. Suppose you realize you made a mistake in your first commit, and you actually meant to write `commit 1 - correct commit`. Revert back to pre-commit 1 state. 
+1. Suppose you realize you made a mistake in your first commit, and you actually meant to write `commit 1 - correct commit` in `FileToModify.txt`. Revert back to pre-commit 1 state. 
     <details>
     <summary>Solution</summary>
     
@@ -142,9 +142,9 @@ The same process can also be used if the the series of commits have not been pus
         1. Resolve merge conflicts if necessary
         1. Add changes with `git add -A`, and continue revert with `git revert --continue`. 
         1. If necessary, type `:q` then press `enter` in your terminal to exit the confirmation message. 
-    1. Run `git log`, and observe there is a new commit which is a "Revert "commit 1"". The hash number of the commit was reverted is provided.
+    1. Run `git log`, and observe there is a new commit which is a "Revert "commit 1"". The hash number of the commit was reverted is provided in the commit description.
 
-        Notice that the existing commit 2 and commit 1 are still in the commit stack, but a new commit "reverted" commit 1. 
+        Notice that the existing commit 2 and commit 1 are still in the commit stack, but a new commit which "reverted" commit 1 is on top. 
     </details>
 
     <details>
@@ -153,9 +153,9 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
 
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -164,15 +164,15 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote my-fork:
 
-    A---B---C---D' scenario5 (commit 2)
+    A---B---C---D scenario5 (commit 2)
     
 
     Remote origin:
     
-    A---B---C---D'' scenario5 (commit 2)
+    A---B---C---D' scenario5 (commit 2)
     ```
     </details>
-1. Fix commit 1 by adding in the correct message "commit 1 - correct commit" to line 3 in `FileToModify.txt`. Stage and commit these changes.
+1. Fix commit 1 by changing line 3 to the correct line "commit 1 - correct commit" in `FileToModify.txt`. Stage and commit these changes.
     <details>
     <summary>Solution</summary>
     
@@ -195,11 +195,11 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
 
-                F commit 1 - correct commit 
+                F scenario5 (commit 1 - correct commit)
                /
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -208,23 +208,23 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote my-fork:
 
-    A---B---C---D' scenario5 (commit 2)
+    A---B---C---D scenario5 (commit 2)
     
 
     Remote origin:
     
-    A---B---C---D'' scenario5 (commit 2)
+    A---B---C---D' scenario5 (commit 2)
     ```
     </details>
-1. Stack your commit 2 on top of your corrected commit 1 by cherry-picking commit 2. 
+1. Put your commit 2 on top of your corrected commit 1 by cherry-picking commit 2. 
     <details>
     <summary>Solution</summary>
     
     1. Use the (git cherry-pick)[https://www.atlassian.com/git/tutorials/cherry-pick] command to pick out any commits (in this case commit 2) that came after commit 1, and stack them on top of the correct commit 1. 
         ```console
-        git cherry pick <commit hash of commit 2>
+        git cherry-pick <commit hash of commit 2>
         ```
-    1. Resolve merge conflicts if necessary. Your `FileToModify.txt` should now look like: 
+    1. Resolve merge conflicts if any appear. Your `FileToModify.txt` should now look like: 
         ```
         Line 1 
         Line 2 
@@ -246,13 +246,13 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
 
-                  G commit 2 (cherry-picked)
+                  G' scenario5 (commit 2 (cherry-picked))
                  /
-                F commit 1 - correct commit 
+                F scenario5 (commit 1 - correct commit)
                /
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -261,18 +261,22 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote my-fork:
 
-    A---B---C---D' scenario5 (commit 2)
+    A---B---C---D scenario5 (commit 2)
     
 
     Remote origin:
     
-    A---B---C---D'' scenario5 (commit 2)
+    A---B---C---D' scenario5 (commit 2)
     ```
     </details>
-1. Push your changes to `my-fork/scenario4`, then open a PR to merge these changes with `origin/master-<your-name>`. 
+1. Push your changes to `my-fork/scenario5`, then open a PR to merge these changes with `origin/master-<your-name>`. 
     <details>
     <summary>Solution</summary>
 
+    1. Push your changes to `my-fork/scenario5`
+        ```console
+        $ git push my-fork scenario5
+        ```
     1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario5` to `origin/master-<your-name>`. 
     1. Run `git fetch origin` to refresh your local repo's pointers  
     1. Using `git log` or a Git GUI, check that the commits are in the right order. 
@@ -284,13 +288,13 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
 
-                  G commit 2 (cherry-picked)
+                  G' scenario5 (commit 2 (cherry-picked))
                  /
-                F commit 1 - correct commit 
+                F scenario5 (commit 1 - correct commit)
                /
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -299,13 +303,13 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote my-fork:
 
-                  G' commit 2 (cherry-picked)
+                  G' scenario5 (commit 2 (cherry-picked))
                  /
-                F commit 1 - correct commit 
+                F scenario5 (commit 1 - correct commit)
                /
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D' sceario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
@@ -314,18 +318,18 @@ The same process can also be used if the the series of commits have not been pus
 
     Remote origin:
     
-                  G'' commit 2 (cherry-picked)
+                  G'' scenario5 (commit 2 (cherry-picked))
                  /
-                F commit 1 - correct commit 
+                F scenario5 (commit 1 - correct commit)
                /
-              E Reverted commit 1
+              E scenario5 (Reverted commit 1)
              /
-            D'' scenario5 (commit 2)
+            D scenario5 (commit 2)
            /
           C scenario5 (commit 1)
          / 
     A---B master-your-name
-    ```s
+    ```
 
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in `originmaster-<your-name>`:
