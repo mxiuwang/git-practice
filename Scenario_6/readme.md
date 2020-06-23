@@ -65,12 +65,12 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     ```
     Our local repo:
     
-    A---B---C Local changes
+    A---B---C scenario 6 (Local changes)
 
 
     Remote my-fork:
     
-    A---B---C Local changes
+    A---B---C scenario 6 (Local changes)
     
 
     Remote origin:
@@ -78,7 +78,7 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     A---B master-your-name
     ```
     </details>
-1.  Simulate changes made by another engineer by going to Github, and adding `Line 2 - Added by another engineer` in the same `FileToModify.txt` file in the Scenario_6 folder, on the `master-<your-name>` branch in `origin`.
+1. Simulate changes made by another engineer by going to Github, and adding `Line 2 - Added by another engineer` in the same `FileToModify.txt` file in the Scenario_6 folder, on the `master-<your-name>` branch in `origin`.
     <details>
     <summary>Solution</summary>
 
@@ -89,7 +89,7 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
         Line 1 - Local changes 
         Line 2 - Added by another engineer 
         ```
-    1. Add the commit message `Added by another engineer`, and click "Commit changes"
+    1. Add the commit message `Added by another engineer`, and click "Commit changes".
     </details>
 
     <details>
@@ -99,12 +99,12 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     ```
     Our local repo:
     
-    A---B---C Local changes
+    A---B---C scenario 6 (Local changes)
 
 
     Remote my-fork:
     
-    A---B---C Local changes
+    A---B---C scenario 6 (Local changes)
     
 
     Remote origin:
@@ -117,7 +117,7 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     <details>
     <summary>Solution</summary>
 
-    1. Update your local `master-<your-nam>` branch with the latest changes from Git
+    1. Update your local `master-<your-name>` branch with the latest changes from Git
         ```console
         $ git checkout master-your-name
         $ git pull origin master-your-name 
@@ -147,19 +147,19 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     ```
     Our local repo:
     
-              C Local changes 
+              C' scenario 6 (Local changes)
              /
-    A---B---D Added by another engineer 
+    A---B---D scenario6 (Added by another engineer)
 
 
     Remote my-fork:
     
-    A---B---C Local changes
+    A---B---C scenario 6 (Local changes)
     
 
     Remote origin:
     
-    A---B---D Added by another engineer 
+    A---B---D Added by another engineer
     ```
     </details>
 
@@ -190,16 +190,16 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     ```
     Our local repo:
     
-              C Local changes 
+              C' scenario 6 (Local changes)
              /
-    A---B---D Added by another engineer 
+    A---B---D scenario6 (Added by another engineer)
 
 
     Remote my-fork:
     
-              C' Local changes 
+              C' scenario 6 (Local changes)
              /
-    A---B---D Added by another engineer 
+    A---B---D scenario6 (Added by another engineer)
     
 
     Remote origin:
@@ -220,16 +220,16 @@ The `--force` flag in [git push <remote> --force](https://www.atlassian.com/git/
     ```
     Our local repo:
     
-              C Local changes 
+              C' scenario 6 (Local changes)
              /
-    A---B---D Added by another engineer 
+    A---B---D scenario6 (Added by another engineer)
 
 
     Remote my-fork:
     
-              C' Local changes 
+              C' scenario 6 (Local changes)
              /
-    A---B---D Added by another engineer 
+    A---B---D scenario6 (Added by another engineer)
     
 
     Remote origin:
