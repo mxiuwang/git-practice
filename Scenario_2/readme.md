@@ -91,7 +91,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ![create new file](img/s2.4_newFile.png)
     1. Name your file `NewFile.txt` and add some text (doesn't matter what).
     ![create new file](img/s2.4_newFileName.png)
-    1. Click "Commit changes"
+    1. Enter "another engineer" as the commit message, then click "Commit changes".
     </details>
 
 1. Fetch the latest references from Github
@@ -128,7 +128,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote origin:
 
-          C another-engineer
+          C another engineer
          /
     A---B master-your-name
     ```
@@ -152,7 +152,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Commit Diagram</summary>
 
-    Observe that your commit `D` now has a different commit number (check using `git log`). We will refer to the rebased commit as `D'`. Commit `D'` is stacked on top of `C`.
+    Observe that your commit `D` (Added a new line) now has a different commit number (check using `git log`). We will refer to the rebased commit as `D'`. Commit `D'` is stacked on top of `C`.
     ```
     Our local repo:
 
@@ -168,7 +168,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote origin:
     
-          C another-engineer
+          C another engineer
          /
     A---B master-your-name
     ```
@@ -186,8 +186,6 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Commit Diagram</summary>
 
-    **Note:**: the commit diagram for remote repos will not appear correctly until you update references with `git fetch`. 
-
     ```
     Our local repo:
 
@@ -205,7 +203,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     Remote origin:
     
-          C another-engineer
+          C another engineer
          /
     A---B master-your-name
     ```
