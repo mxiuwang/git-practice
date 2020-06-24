@@ -8,7 +8,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
 No new commands 
 
 # Instructions
-1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
+1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario4`
     <details>
     <summary>Solution</summary>
@@ -23,7 +23,9 @@ No new commands
 
     ```
     Our local repo:
-    
+        
+          C scenario4
+         /
     A---B master-your-name
 
 
@@ -103,11 +105,9 @@ No new commands
     <details>
     <summary>Solution</summary>
 
-    Refresh your local repo's pointers to `my-fork` (because this repo changed) with the command
     ```console
     $ git fetch my-fork 
     ```
-    More details about `git fetch` can be found in Step 5 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
@@ -210,11 +210,6 @@ No new commands
         $ git add -A 
         $ git rebase --continue
         ```
-    1. Check your rebased changes are in the expected order
-        ```console
-        $ git log
-        ```
-        Your second commit should be on top, followed by the other engineers', followed by your first commit. 
     </details>
 
     <details>
@@ -295,7 +290,6 @@ No new commands
 
     1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario4` to `origin/master-<your-name>`. 
     1. Run `git fetch origin` to refresh your local repo's pointers  
-    1. Using `git log` or a Git GUI, check that the commits are in the right order. 
     </details>
 
     <details>

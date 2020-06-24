@@ -32,7 +32,7 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
 * `git push --force`
 
 # Instructions
-1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
+1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario6`.
     <details>
     <summary>Solution</summary>
@@ -48,6 +48,8 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
     ```
     Our local repo:
     
+          C scenario6
+         /
     A---B master-your-name
 
 
@@ -155,10 +157,6 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
 
         If you forget how to do so, please refer to Step 6 in [scenario 3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3/#Instructions). 
 
-    1. Check your rebased changes are in the expected order
-        ```console
-        $ git log
-        ```
     </details>
 
     <details>
@@ -199,7 +197,6 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
         ```console
         $ git push -u --force my-fork scenario6
         ```
-    1. Using `git log` or a Git GUI, check that the commits are in the right order. 
     </details>
 
     <details>

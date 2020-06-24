@@ -47,7 +47,3 @@ Remote origin:
 
 A---B master-your-name
 ```
-
-Recall: Use the command `git log origin/<branch-name>` if the branch you want does not appear with `git log`. 
-
-Please use `git log` to verify the commit logs with the commit diagram in each step. 

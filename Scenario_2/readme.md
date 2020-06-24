@@ -11,7 +11,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 * `git rebase`
 
 # Instructions
-1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
+1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `Scenario2`.
     <details>
     <summary>Solution</summary>
@@ -26,7 +26,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
 
     ```
     Our local repo:
-    
+        
+          C scenario2
+         /
     A---B master-your-name
 
 
@@ -98,11 +100,9 @@ You will learn how to rebase your changes on a feature branch on top of other en
     <details>
     <summary>Solution</summary>
 
-    Refresh your local repo's pointers to `origin` with the command
     ```console
     $ git fetch origin
     ```
-    More details about `git fetch` can be found in Step 6 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>

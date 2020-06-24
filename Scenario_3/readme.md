@@ -9,10 +9,11 @@ You will first attempt to rebase on a feature branch on top of other engineers' 
 A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) occurs when different developers edit the same code on different feature branches, then try to merge them together. Git doesn't know which set of changes to accept, and a merge conflict results. 
 
 # New Git commands in this section
-No new commands 
+* `git add -A`
+* `git rebase --continue`
 
 # Instructions 
-1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
+1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
 
 1. Create a feature branch on your local machine called `scenario3`
     <details>
@@ -28,7 +29,9 @@ No new commands
 
     ```
     Our local repo:
-    
+        
+          C scenario3
+         /
     A---B master-your-name
 
 
@@ -98,11 +101,9 @@ No new commands
     <details>
     <summary>Solution</summary>
 
-    Refresh your local repo's pointers with the command
     ```console
     $ git fetch origin
     ```
-    More details about `git fetch` can be found in Step 6 of [Scenario 1](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_1/#Instructions)
     </details>
 
     <details>
@@ -129,7 +130,7 @@ No new commands
     A---B master-your-name
     ```
     </details>
-1. Rebase your changes on top of the new changes pulled from the remote `master-<your-name>` branch in the `origin` repo. Resolve any merge conflicts. 
+1. Rebase your changes on top of the new changes pulled from the remote `master-<your-name>` branch in the `origin` repo
     <details>
     <summary>Solution</summary>
 
@@ -143,8 +144,13 @@ No new commands
         ```console
         $ git rebase master-your-name
         ```
-    1. Resolve the merge conflict.
-        First, go to the file where the merge conflict is occuring. You should see something like this:
+    </details>
+
+1. Resolve merge conflicts   
+    <details>
+    <summary>Solution</summary>
+
+    1. Go to the file where the merge conflict is occuring. You should see something like this:
         ```
         <<<<<<< HEAD
         Line 3A - Added by another engineer
@@ -152,13 +158,12 @@ No new commands
         Line 3B - Added by you
         >>>>>>> Line 3B Added by you merge conflict 
         ```
-        The content between `<<<<<<< HEAD` and `=======` is what is currently at the head, which is a reference to the last commit in the current branch. 
+        The content between `<<<<<<< HEAD` and `=======` is the content that is currently on your local machine. 
 
         The content between `=======` and `>>>>>>> Line 3B Added by you merge conflict` is the content you are trying to add, which is conflicting with the content from the last commit. 
 
-        In this case, we want to keep both lines 3A and 3B. So we simply drag line 3B in between `<<<<<<< HEAD` and `=======`, make sure there's no other merge conflicts, and delete the merge conflict markers `<<<<<<< HEAD`, `=======`, and `>>>>>>> Line 3B Added by you merge conflict`.
+        In this case, we want to keep both lines 3A and 3B. So simply edit the file until all the conflict resolution markers (`<<<<<<< HEAD`, `=======`, and `>>>>>>>`) are gone (delete them manually if necessary), and `FileToModify.txt` looks like below:
 
-        Your final FileToModify.txt, after you've resolved the merge conflicts, should look like this:
         ```
         Line 1
         Line 2
@@ -170,12 +175,8 @@ No new commands
         $ git add -A 
         $ git rebase --continue
         ```
-    1. Check your rebased changes are in the expected order
-        ```console
-        $ git log
-        ```
     </details>
-    
+
     <details>
     <summary>Commit Diagram</summary>
 
@@ -237,8 +238,7 @@ No new commands
     <details>
     <summary>Solution</summary>
 
-    1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-<your-name>`. 
-    1. Check that your squashed commit(s) (`D''`) is on top of the other engineer's changes (`C`).
+    Open a Pull Request on Githunb to merge changes from `my-fork/scenario3` to `origin/master-<your-name>`. 
     </details>
 
     <details>
@@ -247,18 +247,24 @@ No new commands
     For more details on the notation and interpretation of these commit diagrams, please refer to Step 8 in [scenario 2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions).
     ```
     Our local repo:
-        
-    A---B---C---D' scenario3 (Line 3B - Added by you)
+
+              D' scenario3 (Line 3B - Added by you)
+             /
+    A---B---C another engineer 
     
 
     Remote my-fork:
     
-    A---B---C---D' scenario3 (Line 3B - Added by you)
+              D' scenario3 (Line 3B - Added by you)
+             /
+    A---B---C another engineer 
     
 
     Remote origin:
     
-    A---B---C---D'' scenario3 (Line 3B - Added by you)
+              D'' scenario3 (Line 3B - Added by you)
+             /
+    A---B---C another engineer 
     ```
     </details>
 

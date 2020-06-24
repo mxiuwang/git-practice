@@ -11,7 +11,7 @@ The same process can also be used if the the series of commits have not been pus
 * `git cherry-pick`
 
 # Instructions
-1. Update/reset your repo using the [cleaning instructions](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) in the main folder so that your `local` and `origin` repos are pointing the the same commit.
+1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario5`
     <details>
     <summary>Solution</summary>
@@ -27,6 +27,8 @@ The same process can also be used if the the series of commits have not been pus
     ```
     Our local repo:
     
+          C scenario5
+         /
     A---B master-your-name
 
 
@@ -237,7 +239,6 @@ The same process can also be used if the the series of commits have not been pus
             $ git cherry-pick --continue
             ```
         1. If necessary, type `:q` then press enter in your terminal to exit the confirmation message. 
-    1. Run `git log`, and observe that the order of commits matches the commit diagram. 
     </details>
 
     <details>
@@ -279,7 +280,7 @@ The same process can also be used if the the series of commits have not been pus
         ```
     1. Open a Pull Request on Githunb to merge changes from `my-fork/scenario5` to `origin/master-<your-name>`. 
     1. Run `git fetch origin` to refresh your local repo's pointers  
-    1. Using `git log` or a Git GUI, check that the commits are in the right order. 
+
     </details>
 
     <details>
