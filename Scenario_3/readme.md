@@ -248,23 +248,17 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     ```
     Our local repo:
 
-              D' scenario3 (Line 3B - Added by you)
-             /
-    A---B---C another engineer 
+    A---B---C---D' scenario3 (Line 3B - Added by you)
     
 
     Remote my-fork:
     
-              D' scenario3 (Line 3B - Added by you)
-             /
-    A---B---C another engineer 
+    A---B---C---D' scenario3 (Line 3B - Added by you)
     
 
     Remote origin:
     
-              D'' scenario3 (Line 3B - Added by you)
-             /
-    A---B---C another engineer 
+    A---B---C---D'' scenario3 (Line 3B - Added by you)
     ```
     </details>
 

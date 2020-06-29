@@ -223,23 +223,17 @@ You will learn how to rebase your changes on a feature branch on top of other en
     ```
     Our local repo:
 
-              D' scenario2 (Added a new line)
-             /
-    A---B---C another engineer 
+    A---B---C---D' scenario2 (Added a new line)
     
 
     Remote my-fork:
 
-              D' scenario2 (Added a new line)
-             /
-    A---B---C another engineer 
+    A---B---C---D' scenario2 (Added a new line)
     
 
     Remote origin:
     
-              D'' scenario2 (Added a new line)
-             /
-    A---B---C another engineer 
+    A---B---C---D'' scenario2 (Added a new line)
     ```
     </details>
     
