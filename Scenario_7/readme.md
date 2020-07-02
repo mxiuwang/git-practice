@@ -193,12 +193,6 @@ You will first "un-merge" the commit by reverting back to the last commit before
     ```
     </details>    
 
-1. git fetch origin
-1. git revert -m 1 <commit hash of merge commit in origin> (:q to quit if necessary)
-1. (add correct changes)
-1. git push -u my-fork scenario7
-1. PR to origin/master-michelle
-
 # End Result
 Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
 ```

@@ -333,7 +333,7 @@ The same process can also be used if the the series of commits have not been pus
     ```
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in `originmaster-<your-name>`:
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
 ```
 Line 1
 Line 2

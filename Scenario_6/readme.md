@@ -256,7 +256,7 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
     </details>
 
 # End Result
-Afterwards, `FileToModify.txt` should look like the following in `originmaster-<your-name>`:
+Afterwards, `FileToModify.txt` should look like the following in `origin/master-<your-name>`:
 ```
 Line 1 - Local changes
 Line 2 - Added by another engineer 
