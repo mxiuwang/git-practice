@@ -25,9 +25,7 @@ You will first "un-merge" the commit by reverting back to the last commit before
     ```
     Our local repo:
     
-          C scenario7
-         /
-    A---B master-your-name
+    A---B---C scenario7 
 
 
     Remote my-fork:
