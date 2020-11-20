@@ -1,6 +1,6 @@
 # Rebase on Feature Branch with Merge Conflicts 
 
-This exercise reflects the scenario when you rebase your changes on top of changes made by other Intuit engineers on your feature branch, but there is a merge conflict you must resolve. 
+This exercise reflects the scenario when you rebase your changes on top of changes made by other engineers on your feature branch, but there is a merge conflict you must resolve. 
 
 You will first attempt to rebase your changes made on feature branch on top of other engineers' changes in the same branch, and manually resolve any merge conflicts. Then, push the feature branch to remote. 
 
@@ -8,7 +8,7 @@ You will first attempt to rebase your changes made on feature branch on top of o
 No new commands 
 
 # Instructions
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario4`
     <details>
     <summary>Solution</summary>
@@ -195,7 +195,7 @@ No new commands
         ```
     1. Resolve the merge conflict(s)
         
-        For more details on how this is done, refer to Step 6 in [Scneario 3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3/#Instructions).
+        For more details on how this is done, refer to Step 6 in [Scenario 3](https://github.com/mxiuwang/git-practice/tree/master/Scenario_3/#Instructions).
 
         Your final FileToModify.txt should look like this:
         ```
