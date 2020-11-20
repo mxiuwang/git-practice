@@ -1,6 +1,6 @@
 # Rebase requiring force push 
 
-This exercise reflects the scenario where you must rebase updates in your feature branch that have already been pushed to your fork, on top of changes other Intuit engineers made master. However, you must use a `Force push` to rewrite commit history. 
+This exercise reflects the scenario where you must rebase updates in your feature branch that have already been pushed to your fork, on top of changes other engineers made master. However, you must use a `Force push` to rewrite commit history. 
 
 ## What is "[Force pushing](https://www.atlassian.com/git/tutorials/syncing/git-push)"?
 
@@ -32,7 +32,7 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
 * `git push --force`
 
 # Instructions
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario6`.
     <details>
     <summary>Solution</summary>
@@ -104,7 +104,7 @@ The `--force` flag in git push <remote> --force is a very dangerous, yet powerfu
     <details>
     <summary>Solution</summary>
 
-    1. Navigate to the [Scenario_6](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_6) folder in `origin`. 
+    1. Navigate to the [Scenario_6](https://github.com/mxiuwang/git-practice/tree/master/Scenario_6) folder in `origin`. 
     1. From the `branch` dropdown, choose `master-<your-name>`.
     1. Open `FileToModify.txt`, and change the line `Line 3B - Added by you` to `Line 2 - Added by another engineer` so that the file looks like:
         ```
