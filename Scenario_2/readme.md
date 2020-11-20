@@ -1,6 +1,6 @@
 # Rebase with no merge conflicts 
 
-This exercise reflects the scenario when other Intuit engineers have made changes to master, and you must rebase your changes on top of theirs.
+This exercise reflects the scenario when other engineers have made changes to master, and you must rebase your changes on top of theirs.
 
 You will learn how to rebase your changes on a feature branch on top of other engineers' changes in the `master-your-name` branch, assuming there are no merge conflicts. 
 
