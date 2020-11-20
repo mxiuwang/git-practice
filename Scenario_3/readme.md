@@ -1,6 +1,6 @@
 # Rebase with merge conflicts
 
-This exercise reflects the scenario when you rebase your changes on top of changes made by other Intuit engineers, but there is a merge conflict you must resolve. 
+This exercise reflects the scenario when you rebase your changes on top of changes made by other engineers, but there is a merge conflict you must resolve. 
 
 You will first attempt to rebase on a feature branch on top of other engineers' changes in the master branch, manually resolve any merge conflicts, then push all changes to the remote. 
 
@@ -13,7 +13,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
 * `git rebase --continue`
 
 # Instructions 
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 
 1. Create a feature branch on your local machine called `scenario3`
     <details>
@@ -86,7 +86,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <details>
     <summary>Solution</summary>
 
-    1. Navigate to the [Scenario_3](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_3) folder in `origin`. 
+    1. Navigate to the [Scenario_3](https://github.com/mxiuwang/git-practice/tree/master/Scenario_3) folder in `origin`. 
     1. From the `branch` dropdown, choose `master-<your-name>`.
     1. Open `FileToModify.txt`, and change the line `Line 3B - Added by you` to `Line 3A - Added by another engineer` so that the file looks like:
         ```
@@ -244,7 +244,7 @@ A [merge conflict](https://www.atlassian.com/git/tutorials/using-branches/merge-
     <details>
     <summary>Commit Diagram</summary>
 
-    For more details on the notation and interpretation of these commit diagrams, please refer to Step 8 in [scenario 2](https://github.intuit.com/Albertasaurus/git-practice/tree/master/Scenario_2/#Instructions).
+    For more details on the notation and interpretation of these commit diagrams, please refer to Step 8 in [scenario 2](https://github.com/mxiuwang/git-practice/tree/master/Scenario_2/#Instructions).
     ```
     Our local repo:
 
