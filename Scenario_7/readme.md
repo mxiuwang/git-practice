@@ -9,7 +9,7 @@ You will first "un-merge" the commit by reverting back to the last commit before
 * `git revert -m 2`
 
 # Instructions
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario7`.
     <details>
     <summary>Solution</summary>
@@ -80,7 +80,7 @@ You will first "un-merge" the commit by reverting back to the last commit before
     <details>
     <summary>Solution</summary>
 
-    1. View the commit history on your `master-<your-name>` branch in the [Albertasaurus repo](https://github.intuit.com/Albertasaurus/git-practice/commits/master) by navigating to the Albertasaurus repo on Github, and choosing the `master-<your-name>` branch from the "Branch" dropdown.
+    1. View the commit history on your `master-<your-name>` branch in the [Default master repo](https://github.com/mxiuwang/git-practice/commits/master) by navigating to the Albertasaurus repo on Github, and choosing the `master-<your-name>` branch from the "Branch" dropdown.
     1. From the list of commits, locate the commit that merged your PR from `my-fork/scenario7` to `origin/master-<your-name>`, and click on the commit hash (on the right hand side).
     !["find commit hash"](img/s7.4.2.png)
     1. Copy the full commit hash of the merge commit 
