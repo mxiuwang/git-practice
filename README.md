@@ -15,7 +15,7 @@ Perform these instructions once before doing the exercises:
 
     Use the following command to clone the repo:
     ```console
-    $ git clone `URL of repo`
+    $ git clone `SSH of repo`
     ```
     The remote located at `URL of repo` will be referred to as "origin".
 1. Fork the above repo on your account by opening the repo on Github, and clicking the "fork" button on the top right-hand corner. Observe that the URL of this remote is `github.com/<your-name>/git-practice`. 
@@ -41,7 +41,7 @@ Perform these instructions once before doing the exercises:
     ```console
     $ git push -u origin master-<your-name>
     ```
-1. Verify that the alias `origin` points to [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice) and alias `my-fork` points to [github.intuit.com/<your-name>/git-practice](github.intuit.com/<your-name>/git-practice)
+1. Verify that the alias `origin` points to [https://github.com/mxiuwang/git-practice](https://github.com/mxiuwang/git-practice) and alias `my-fork` points to [github.com/<your-name>/git-practice](github.com/<your-name>/git-practice)
 
     ```console
     $ git remote -v
@@ -49,27 +49,27 @@ Perform these instructions once before doing the exercises:
 
     Your output should look something similar to: 
     ```
-    my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (fetch)
-    my-fork	https://github.intuit.com/mwang5/git-practice?organization=mwang5 (push)
-    origin	git@github.intuit.com:Albertasaurus/git-practice.git (fetch)
-    origin	git@github.intuit.com:Albertasaurus/git-practice.git (push)
+    my-fork	https://github.com/mxiuwang/git-practice?organization=mwang5 (fetch)
+    my-fork	https://github.com/mxiuwang/git-practice?organization=mwang5 (push)
+    origin	git@github.com:Albertasaurus/git-practice.git (fetch)
+    origin	git@github.com:Albertasaurus/git-practice.git (push)
     ```
 
 Diagram depicting the realtionship between `origin`, `my-fork`, and your local repositories.
 
 ![Git repo setup overview](img/overview_diagram.png)
 <!-- (This is the link to edit the diagram: https://app.mural.co/invitation/mural/intuitqboteam/1589302194189?sender=michellewang8970&key=961f09bb-98be-471c-90e8-6d71e6a1dab1) -->
-* origin: refers to the remote at [https://github.intuit.com/Albertasaurus/git-practice](https://github.intuit.com/Albertasaurus/git-practice)
-* my-fork: refers to the remote at `https://github.intuit.com/<your-name>/git-practice`
+* origin: refers to the remote at [https://github.com/mxiuwang/git-practice](https://github.com/mxiuwang/git-practice)
+* my-fork: refers to the remote at `https://github.com/<your-name>/git-practice`
 
 # Conventions and Concepts 
 ## Forking
-Our general workflow at Intuit includes forking off a copy of the original repository (`origin`) from Albertasaurus to our own account (`my-fork`). This is to ensure an additional check-and-balance before changes are introduced to production, and is also the most common way of making contributions to open-source projects. 
+General workflow includes forking off a copy of the original repository (`origin`) from this Master repo to our own account (`my-fork`). This is to ensure an additional check-and-balance before changes are introduced to production, and is also the most common way of making contributions to open-source projects. 
 
 ## Local and Remote Repositories 
 A local repository is "folder" on your computer containing your code base, and only editable by you. A remote repository is your code base located on an online server (aka "remote").
 
-At Intuit and on projects where there are multiple contributors, each author creates a local responsitory cloned from the remote repository. When any author changes or adds new code from their local repo, they can `push`, or "send" them to the remote repo on Github.
+On projects where there are multiple contributors, each author creates a local responsitory cloned from the remote repository. When any author changes or adds new code from their local repo, they can `push`, or "send" them to the remote repo on Github.
 
 Click [here](https://www.intertech.com/Blog/introduction-to-git-concepts/) for more information.
 
