@@ -1,7 +1,7 @@
 # About this Repo
-This is a repository is a Git practice package with exercises designed to help you develop your Git skills, in the way it is most commonly used at Intuit! This repo is intended for any Intuit employee learning Git for the first time, or engineers wishing to familiarize themselves with the Git workflow at Intuit. 
+This is a repository is a Git practice package with exercises designed to help you develop your Git skills! This repo is intended for anyone learning Git for the first time, or engineers wishing to familiarize themselves with Git workflow. 
 
-The repository contains common scenarios that Intuit engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario is contained within a folder, and within each folder is a `readme` detailling all the learning goals, instructions, and solutions to each exercise.
+The repository contains common scenarios that software engineers may face. In general, scenarios are designed in ascending level of complexity. Each scenario is contained within a folder, and within each folder is a `readme` detailling all the learning goals, instructions, and solutions to each exercise.
 
 # Setup
 Perform these instructions once before doing the exercises:
@@ -15,19 +15,19 @@ Perform these instructions once before doing the exercises:
 
     Use the following command to clone the repo:
     ```console
-    $ git clone git@github.intuit.com:Albertasaurus/git-practice.git
+    $ git clone `URL of repo`
     ```
-    The remote located at `https://github.intuit.com/Albertasaurus/git-practice` will be referred to as "origin".
-1. Fork the above repo on your account by opening the repo on Github, and clicking the "fork" button on the top right-hand corner. Observe that the URL of this remote is `github.intuit.com/<your-name>/git-practice`. 
+    The remote located at `URL of repo` will be referred to as "origin".
+1. Fork the above repo on your account by opening the repo on Github, and clicking the "fork" button on the top right-hand corner. Observe that the URL of this remote is `github.com/<your-name>/git-practice`. 
 
     From now on, this fork will be referred to as `my-fork`. 
 1. Configure my-fork as a remote in your local `git-practice` repo. 
 
     Add `my-fork` as a remote 
     ```console
-    $ git remote add my-fork github.intuit.com/<your-name>/git-practice 
+    $ git remote add my-fork github.com/<your-name>/git-practice 
     ```
-    This adds "my-fork" as an alias, pointing to the remote `github.intuit.com/<your-name>/git-practice`. 
+    This adds "my-fork" as an alias, pointing to the remote `github.com/<your-name>/git-practice`. 
 1. Create a new branch named `master-<your-name>` in your local repo by creating and checking out a new master branch
     ```console
     $ git checkout -b master-<your-name>`
