@@ -11,7 +11,7 @@ You will learn how to rebase your changes on a feature branch on top of other en
 * `git rebase`
 
 # Instructions
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `Scenario2`.
     <details>
     <summary>Solution</summary>
