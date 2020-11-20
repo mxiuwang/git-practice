@@ -11,7 +11,7 @@ The same process can also be used if the the series of commits have not been pus
 * `git cherry-pick`
 
 # Instructions
-1. [Reset your repo](https://github.intuit.com/Albertasaurus/git-practice/blob/master/Cleaning.md) to a clean state
+1. [Reset your repo](https://github.com/mxiuwang/git-practice/blob/master/Cleaning.md) to a clean state
 1. Create a feature branch on your local machine called `scenario5`
     <details>
     <summary>Solution</summary>
