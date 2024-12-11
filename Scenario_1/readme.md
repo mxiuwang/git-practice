@@ -6,7 +6,7 @@ This exercise reflects the best-case scenario, where you (an engineer) pull code
 
 A [feature branch](https://bocoup.com/blog/git-workflow-walkthrough-feature-branches) is simply a separate branch in your Git repo used to implement a single feature in your project.
 
-Geature branches will be typically named after the JIRA ticket representing the feature or bug. For example in Payroll, a feature branch may be named `PD-123456` instead of `scenario1`.
+Feature branches will be typically named after the JIRA ticket representing the feature or bug. For example in Payroll, a feature branch may be named `PD-123456` instead of `scenario1`.
 
 ## Commit Diagrams
 The commit diagrams included in each step of the instructions should match the commit log which can be accessed in terminal with the command:
